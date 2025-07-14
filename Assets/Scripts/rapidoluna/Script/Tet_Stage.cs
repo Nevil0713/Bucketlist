@@ -8,6 +8,7 @@ public class Tet_Stage : MonoBehaviour
     public Transform backgroundNode;
     public Transform boardNode;
     public Transform tet_blockNode;
+    public Transform gameoverPanel;
 
     //Setting Game Space...?
     [Header("Game Settings")]
@@ -15,7 +16,7 @@ public class Tet_Stage : MonoBehaviour
     public int boardWidth = 10;
     [Range(5, 20)]
     public int boardHeight = 20;
-    public float fallCycle = 0.5f;
+    public float fallCycle = 1.0f;
 
     private int halfWidth;
     private int halfHeight;
@@ -24,12 +25,21 @@ public class Tet_Stage : MonoBehaviour
 
     private void Start()
     {
+
         halfWidth = (int)(boardWidth * 0.5f);
         halfHeight = (int)(boardHeight * 0.5f);
 
         nextFallTime = Time.time + fallCycle;
 
         CreateBackground();
+
+        for (int i = 0; i < boardHeight; ++i)
+        {
+            var col = new GameObject((boardHeight - i - 1).ToString());
+            col.transform.position = new Vector3(0, halfHeight - i, 0);
+            col.transform.parent = boardNode;
+        }
+
         CreateBlock();
     }
 
@@ -41,11 +51,11 @@ public class Tet_Stage : MonoBehaviour
         //player control
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            moveDir.x = -0.5f;
+            moveDir.x = -1.0f;
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            moveDir.x = 0.5f;
+            moveDir.x = 1.0f;
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -54,9 +64,16 @@ public class Tet_Stage : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            moveDir.y = -0.5f;
+            moveDir.y = -1.0f;
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            while (moveTeto(Vector3.down, false))
+            {
+            }
+        }
+
         //fall automatically
         if (Time.time > nextFallTime)
         {
@@ -73,10 +90,119 @@ public class Tet_Stage : MonoBehaviour
 
     bool moveTeto(Vector3 moveDir, bool isRotate)
     {
+        Vector3 oldPos = tet_blockNode.transform.position;
+        Quaternion oldRot = tet_blockNode.transform.rotation;
+
         tet_blockNode.transform.position += moveDir;
         if (isRotate)
         {
             tet_blockNode.transform.rotation *= Quaternion.Euler(0, 0, 90);
+        }
+
+        if (!canMoveTo(tet_blockNode))
+        {
+            tet_blockNode.transform.position = oldPos;
+            tet_blockNode.transform.rotation = oldRot;
+
+            if ((int)moveDir.y == -1 && (int)moveDir.x == 0 && isRotate == false)
+            {
+                AddToBoard(tet_blockNode);
+                CheckBoardColumn();
+                CreateBlock();
+            }
+
+            return false;
+        }
+        return true;
+    }
+
+    void AddToBoard(Transform root)
+    {
+        while (root.childCount > 0)
+        {
+            var node = root.GetChild(0);
+
+            int x = Mathf.RoundToInt(node.transform.position.x + halfWidth);
+            int y = Mathf.RoundToInt(node.transform.position.y + halfHeight - 1);
+
+            node.parent = boardNode.Find(y.ToString());
+            node.name = x.ToString();
+        }
+    }
+
+    void CheckBoardColumn()
+    {
+        bool isCleared = false;
+
+        foreach (Transform column in boardNode)
+        {
+            if(column.childCount == boardWidth)
+            {
+                foreach(Transform tile in column)
+                {
+                    Destroy(tile.gameObject);
+                }
+
+                column.DetachChildren();
+                isCleared = true;
+            }
+        }
+
+        if (isCleared)
+        {
+            for(int i = 1; i < boardNode.childCount; ++i)
+            {
+                var column = boardNode.Find(i.ToString());
+
+                if (column.childCount == 0)
+                    continue;
+
+            int emptyCol = 0;
+                int j = i - 1;
+
+            while (j >= 0)
+                {
+                    if(boardNode.Find(j.ToString()).childCount == 0)
+                    {
+                        emptyCol++;
+                    }
+                    j--;
+                }
+            if (emptyCol > 0)
+                {
+                    var targetColumn = boardNode.Find((i - emptyCol).ToString());
+
+                    while (column.childCount > 0)
+                    {
+                        Transform tile = column.GetChild(0);
+                        tile.parent = targetColumn;
+                        tile.transform.position += new Vector3(0, -emptyCol, 0);
+                    }
+                    column.DetachChildren();
+                }
+            }
+        }
+    }
+
+    //in board move checker
+    bool canMoveTo(Transform root)
+    {
+        for (int i = 0; i < root.childCount; ++i)
+        {
+            var node = root.GetChild(i);
+            int x = Mathf.RoundToInt(node.transform.position.x + halfWidth);
+            int y = Mathf.RoundToInt(node.transform.position.y + halfHeight - 1.0f);
+
+            if (x < 0 || x > boardWidth - 1)
+                return false;
+
+            if (y < 0)
+                return false;
+
+            var column = boardNode.Find(y.ToString());
+
+            if(column  != null && column.Find(x.ToString()) != null)
+                return false;
         }
 
         return true;
@@ -87,7 +213,7 @@ public class Tet_Stage : MonoBehaviour
     {
         var go = Instantiate(tilePrefab);
         go.transform.parent = parent;
-        go.transform.localPosition = position * 0.5f;
+        go.transform.localPosition = position * 1.0f;
 
         var tile = go.GetComponent<Tile>();
         tile.color = color;
