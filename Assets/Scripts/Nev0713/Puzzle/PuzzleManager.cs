@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -9,6 +8,20 @@ public class PuzzleManager : MonoBehaviour
 
     private void Awake()
     {
+        Init();
+    }
+
+    private void Update()
+    {
+        if (m_puzzle.IsCleared() && m_puzzleNumber < puzzles.Length)
+        {
+            m_puzzle.gameObject.SetActive(false);
+            PuzzleClear();
+        }
+    }
+
+    public void Init()
+    {
         for (int i = 0; i < puzzles.Length; i++)
         {
             puzzles[i].SetActive(false);
@@ -16,36 +29,26 @@ public class PuzzleManager : MonoBehaviour
         PuzzleStart();
     }
 
-    private void Update()
-    {
-        if (m_puzzle.IsCleared())
-        {
-            m_puzzle.gameObject.SetActive(false);
-            PuzzleClear();
-        }
-    }
-
-    public void PuzzleStart()
+    private void PuzzleStart()
     {
         puzzles[m_puzzleNumber].SetActive(true);
         m_puzzle = puzzles[m_puzzleNumber].GetComponent<Puzzle>();
     }
 
-    public void PuzzleClear()
+    private void PuzzleClear()
     {
         m_puzzleNumber++;
         if(m_puzzleNumber == puzzles.Length)
         {
             GameClear();
+            return;
         }
-        else
-        {
-            PuzzleStart();
-        }
+        PuzzleStart();
+        
     }
 
-    public void GameClear()
+    private void GameClear()
     {
-        SceneManager.LoadScene("");
+        // 다음 스토리 진행
     }
 }
