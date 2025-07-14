@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BG_Script : MonoBehaviour
+public class Tet_Stage : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
