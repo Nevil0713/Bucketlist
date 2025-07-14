@@ -201,19 +201,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 84350133}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &84350133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,13 +249,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 84350130}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991bf4af9e4b41b419791cbf89ec272a, type: 3}
+  m_Script: {fileID: 11500000, guid: db8ec62d3db99e74aacbc9c0989027ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_flipAndMatch: {fileID: 0}
-  m_cardSprites:
-  - {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
-  - {fileID: -1325753890581858130, guid: 2d022d472978b884aaf62bcfec0a5814, type: 3}
+  frontSprite: {fileID: -1325753890581858130, guid: 2d022d472978b884aaf62bcfec0a5814, type: 3}
+  backSprite: {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
 --- !u!1 &307779891
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,19 +415,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 364913028}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &364913028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -489,13 +463,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 364913025}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991bf4af9e4b41b419791cbf89ec272a, type: 3}
+  m_Script: {fileID: 11500000, guid: db8ec62d3db99e74aacbc9c0989027ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_flipAndMatch: {fileID: 0}
-  m_cardSprites:
-  - {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
-  - {fileID: -3216283430304802289, guid: dbb9de597f7734e4795977eff5df497b, type: 3}
+  frontSprite: {fileID: -3216283430304802289, guid: dbb9de597f7734e4795977eff5df497b, type: 3}
+  backSprite: {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
 --- !u!1 &556799788
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,19 +550,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 556799791}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &556799791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -638,13 +598,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 556799788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991bf4af9e4b41b419791cbf89ec272a, type: 3}
+  m_Script: {fileID: 11500000, guid: db8ec62d3db99e74aacbc9c0989027ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_flipAndMatch: {fileID: 0}
-  m_cardSprites:
-  - {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
-  - {fileID: -1325753890581858130, guid: 2d022d472978b884aaf62bcfec0a5814, type: 3}
+  frontSprite: {fileID: -1325753890581858130, guid: 2d022d472978b884aaf62bcfec0a5814, type: 3}
+  backSprite: {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
 --- !u!1 &596602518
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,19 +685,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 596602521}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &596602521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -787,13 +733,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 596602518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991bf4af9e4b41b419791cbf89ec272a, type: 3}
+  m_Script: {fileID: 11500000, guid: db8ec62d3db99e74aacbc9c0989027ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_flipAndMatch: {fileID: 0}
-  m_cardSprites:
-  - {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
-  - {fileID: -2165808416186281336, guid: 6cf838a0445851447960746befe56a18, type: 3}
+  frontSprite: {fileID: -2165808416186281336, guid: 6cf838a0445851447960746befe56a18, type: 3}
+  backSprite: {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
 --- !u!1 &685707948
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,19 +820,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 685707951}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &685707951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -936,13 +868,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 685707948}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991bf4af9e4b41b419791cbf89ec272a, type: 3}
+  m_Script: {fileID: 11500000, guid: db8ec62d3db99e74aacbc9c0989027ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_flipAndMatch: {fileID: 0}
-  m_cardSprites:
-  - {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
-  - {fileID: 2360226604868353026, guid: 0e995ab0d33720941953d909ed438f16, type: 3}
+  frontSprite: {fileID: 2360226604868353026, guid: 0e995ab0d33720941953d909ed438f16, type: 3}
+  backSprite: {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
 --- !u!1 &956199804
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,19 +955,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 956199807}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 956199809}
-        m_TargetAssemblyTypeName: FlipAndMatchObject, Assembly-CSharp
-        m_MethodName: FlipCard
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &956199807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1085,13 +1003,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 956199804}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991bf4af9e4b41b419791cbf89ec272a, type: 3}
+  m_Script: {fileID: 11500000, guid: db8ec62d3db99e74aacbc9c0989027ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_flipAndMatch: {fileID: 0}
-  m_cardSprites:
-  - {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
-  - {fileID: -418678913202170186, guid: 22be380cc44f33a4e90c8abd16900a7e, type: 3}
+  frontSprite: {fileID: -418678913202170186, guid: 22be380cc44f33a4e90c8abd16900a7e, type: 3}
+  backSprite: {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
 --- !u!1 &985084833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,19 +1090,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 985084836}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &985084836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1234,13 +1138,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 985084833}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991bf4af9e4b41b419791cbf89ec272a, type: 3}
+  m_Script: {fileID: 11500000, guid: db8ec62d3db99e74aacbc9c0989027ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_flipAndMatch: {fileID: 0}
-  m_cardSprites:
-  - {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
-  - {fileID: -4013211722808637865, guid: 23e9b3b01b997c84da8ab81a05d56f85, type: 3}
+  frontSprite: {fileID: -4013211722808637865, guid: 23e9b3b01b997c84da8ab81a05d56f85, type: 3}
+  backSprite: {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
 --- !u!1 &1131421423
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,19 +1225,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1131421426}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1131421426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1383,13 +1273,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1131421423}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991bf4af9e4b41b419791cbf89ec272a, type: 3}
+  m_Script: {fileID: 11500000, guid: db8ec62d3db99e74aacbc9c0989027ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_flipAndMatch: {fileID: 0}
-  m_cardSprites:
-  - {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
-  - {fileID: 2360226604868353026, guid: 0e995ab0d33720941953d909ed438f16, type: 3}
+  frontSprite: {fileID: 2360226604868353026, guid: 0e995ab0d33720941953d909ed438f16, type: 3}
+  backSprite: {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
 --- !u!1 &1215051900
 GameObject:
   m_ObjectHideFlags: 0
@@ -1517,27 +1405,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1215051900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c5a380ce838d374ea6659c8def0c299, type: 3}
+  m_Script: {fileID: 11500000, guid: e75cf8026137fe8408e14f3f39aa6048, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cards:
-  - {fileID: 2075821546}
-  - {fileID: 956199804}
-  - {fileID: 1634854155}
-  - {fileID: 1649993946}
-  - {fileID: 1131421423}
-  - {fileID: 1786147845}
-  - {fileID: 985084833}
-  - {fileID: 556799788}
-  - {fileID: 596602518}
-  - {fileID: 1939167290}
-  - {fileID: 2054027537}
-  - {fileID: 364913025}
-  - {fileID: 685707948}
-  - {fileID: 1833732009}
-  - {fileID: 1468471472}
-  - {fileID: 84350130}
-  cardSprites:
+  frontSprites:
   - {fileID: -2165808416186281336, guid: 6cf838a0445851447960746befe56a18, type: 3}
   - {fileID: -418678913202170186, guid: 22be380cc44f33a4e90c8abd16900a7e, type: 3}
   - {fileID: -5059547392018692610, guid: 7a5d6ddffa0aee64c9e645ca9aa36243, type: 3}
@@ -1546,7 +1417,7 @@ MonoBehaviour:
   - {fileID: 3383016452190782798, guid: d511411d1a24d184fa326e777855da8b, type: 3}
   - {fileID: -4013211722808637865, guid: 23e9b3b01b997c84da8ab81a05d56f85, type: 3}
   - {fileID: -1325753890581858130, guid: 2d022d472978b884aaf62bcfec0a5814, type: 3}
-  rounds: 3
+  cards: []
 --- !u!1 &1468471472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,19 +1500,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1468471475}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1468471475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1689,13 +1548,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1468471472}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991bf4af9e4b41b419791cbf89ec272a, type: 3}
+  m_Script: {fileID: 11500000, guid: db8ec62d3db99e74aacbc9c0989027ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_flipAndMatch: {fileID: 0}
-  m_cardSprites:
-  - {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
-  - {fileID: -4013211722808637865, guid: 23e9b3b01b997c84da8ab81a05d56f85, type: 3}
+  frontSprite: {fileID: -4013211722808637865, guid: 23e9b3b01b997c84da8ab81a05d56f85, type: 3}
+  backSprite: {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
 --- !u!1 &1623467138
 GameObject:
   m_ObjectHideFlags: 0
@@ -1915,19 +1772,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1634854158}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1634854160}
-        m_TargetAssemblyTypeName: FlipAndMatchObject, Assembly-CSharp
-        m_MethodName: FlipCard
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1634854158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1975,13 +1820,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1634854155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991bf4af9e4b41b419791cbf89ec272a, type: 3}
+  m_Script: {fileID: 11500000, guid: db8ec62d3db99e74aacbc9c0989027ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_flipAndMatch: {fileID: 0}
-  m_cardSprites:
-  - {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
-  - {fileID: -5059547392018692610, guid: 7a5d6ddffa0aee64c9e645ca9aa36243, type: 3}
+  frontSprite: {fileID: -5059547392018692610, guid: 7a5d6ddffa0aee64c9e645ca9aa36243, type: 3}
+  backSprite: {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
 --- !u!1 &1649993946
 GameObject:
   m_ObjectHideFlags: 0
@@ -2064,19 +1907,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1649993949}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1649993951}
-        m_TargetAssemblyTypeName: FlipAndMatchObject, Assembly-CSharp
-        m_MethodName: FlipCard
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1649993949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2124,13 +1955,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1649993946}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991bf4af9e4b41b419791cbf89ec272a, type: 3}
+  m_Script: {fileID: 11500000, guid: db8ec62d3db99e74aacbc9c0989027ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_flipAndMatch: {fileID: 0}
-  m_cardSprites:
-  - {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
-  - {fileID: -3216283430304802289, guid: dbb9de597f7734e4795977eff5df497b, type: 3}
+  frontSprite: {fileID: -3216283430304802289, guid: dbb9de597f7734e4795977eff5df497b, type: 3}
+  backSprite: {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
 --- !u!1 &1786147845
 GameObject:
   m_ObjectHideFlags: 0
@@ -2213,19 +2042,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1786147848}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1786147848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2273,13 +2090,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1786147845}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991bf4af9e4b41b419791cbf89ec272a, type: 3}
+  m_Script: {fileID: 11500000, guid: db8ec62d3db99e74aacbc9c0989027ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_flipAndMatch: {fileID: 0}
-  m_cardSprites:
-  - {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
-  - {fileID: 3383016452190782798, guid: d511411d1a24d184fa326e777855da8b, type: 3}
+  frontSprite: {fileID: 3383016452190782798, guid: d511411d1a24d184fa326e777855da8b, type: 3}
+  backSprite: {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
 --- !u!1 &1833732009
 GameObject:
   m_ObjectHideFlags: 0
@@ -2362,19 +2177,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1833732012}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1833732012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2422,13 +2225,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1833732009}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991bf4af9e4b41b419791cbf89ec272a, type: 3}
+  m_Script: {fileID: 11500000, guid: db8ec62d3db99e74aacbc9c0989027ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_flipAndMatch: {fileID: 0}
-  m_cardSprites:
-  - {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
-  - {fileID: 3383016452190782798, guid: d511411d1a24d184fa326e777855da8b, type: 3}
+  frontSprite: {fileID: 3383016452190782798, guid: d511411d1a24d184fa326e777855da8b, type: 3}
+  backSprite: {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
 --- !u!1 &1939167290
 GameObject:
   m_ObjectHideFlags: 0
@@ -2511,19 +2312,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1939167293}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1939167293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2571,13 +2360,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1939167290}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991bf4af9e4b41b419791cbf89ec272a, type: 3}
+  m_Script: {fileID: 11500000, guid: db8ec62d3db99e74aacbc9c0989027ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_flipAndMatch: {fileID: 0}
-  m_cardSprites:
-  - {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
-  - {fileID: -418678913202170186, guid: 22be380cc44f33a4e90c8abd16900a7e, type: 3}
+  frontSprite: {fileID: -418678913202170186, guid: 22be380cc44f33a4e90c8abd16900a7e, type: 3}
+  backSprite: {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
 --- !u!1 &2054027537
 GameObject:
   m_ObjectHideFlags: 0
@@ -2660,19 +2447,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2054027540}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2054027540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2720,13 +2495,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2054027537}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991bf4af9e4b41b419791cbf89ec272a, type: 3}
+  m_Script: {fileID: 11500000, guid: db8ec62d3db99e74aacbc9c0989027ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_flipAndMatch: {fileID: 0}
-  m_cardSprites:
-  - {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
-  - {fileID: -5059547392018692610, guid: 7a5d6ddffa0aee64c9e645ca9aa36243, type: 3}
+  frontSprite: {fileID: -5059547392018692610, guid: 7a5d6ddffa0aee64c9e645ca9aa36243, type: 3}
+  backSprite: {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
 --- !u!1 &2075821546
 GameObject:
   m_ObjectHideFlags: 0
@@ -2809,19 +2582,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2075821549}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2075821551}
-        m_TargetAssemblyTypeName: FlipAndMatchObject, Assembly-CSharp
-        m_MethodName: FlipCard
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2075821549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2869,13 +2630,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2075821546}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991bf4af9e4b41b419791cbf89ec272a, type: 3}
+  m_Script: {fileID: 11500000, guid: db8ec62d3db99e74aacbc9c0989027ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_flipAndMatch: {fileID: 0}
-  m_cardSprites:
-  - {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
-  - {fileID: -2165808416186281336, guid: 6cf838a0445851447960746befe56a18, type: 3}
+  frontSprite: {fileID: -2165808416186281336, guid: 6cf838a0445851447960746befe56a18, type: 3}
+  backSprite: {fileID: -4549871927518758641, guid: d8fe3014557e5c34b8569f195d68e0bd, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

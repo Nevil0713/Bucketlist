@@ -3,30 +3,55 @@ using UnityEngine.UI;
 
 public class FlipAndMatchObject : MonoBehaviour
 {
-    [SerializeField] private FlipAndMatch m_flipAndMatch;
-    [SerializeField] private Sprite[] m_cardSprites;
-    private int m_spriteNumber;
-    private int m_cardNumber;
+    [SerializeField] private Sprite frontSprite;
+    [SerializeField] private Sprite backSprite;
 
-    public void FlipCard()
+    private Image m_image;
+    private FlipAndMatchManager m_manager;
+
+    private bool m_isFlipped = false;
+    private bool m_isMatched = false;
+
+    private void Awake()
     {
-        gameObject.GetComponent<Image>().sprite = m_cardSprites[m_spriteNumber++];
-        m_spriteNumber %= 2;
-        m_flipAndMatch.FlipCheck(this);
+        m_image = GetComponent<Image>();
+        m_image.sprite = backSprite;
+        m_manager = FindAnyObjectByType<FlipAndMatchManager>();
+
+        GetComponent<Button>().onClick.AddListener(OnClick);
     }
 
-    public void SetCardSprite(Sprite pSprite)
+    private void OnClick()
     {
-        m_cardSprites[1] = pSprite;
+        if (m_isFlipped || m_isMatched || m_manager.IsBusy)
+            return;
+
+        FlipFront();
+        m_manager.OnCardClicked(this);
     }
 
-    public void SetCardNumber(int pNumber)
+    public void SetMatched()
     {
-        m_cardNumber = pNumber;
+        m_isMatched = true;
+        GetComponent<Button>().interactable = false;
     }
 
-    public int GetCardNumber()
+    public void FlipFront()
     {
-        return m_cardNumber;
+        gameObject.GetComponent<Image>().sprite = frontSprite;
+    }
+
+    public void FlipBack()
+    {
+        gameObject.GetComponent<Image>().sprite = backSprite;
+    }
+
+    public void SetFrontSprite(Sprite pSprite)
+    {
+        frontSprite = pSprite;
+    }
+    public Sprite GetFrontSprite()
+    {
+        return frontSprite;
     }
 }

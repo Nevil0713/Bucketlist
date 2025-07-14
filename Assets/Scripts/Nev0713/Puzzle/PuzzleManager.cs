@@ -49,6 +49,7 @@ public class PuzzleManager : MonoBehaviour
 
     private void GameClear()
     {
+        Debug.Log("Clear");
         // 다음 스토리 진행
     }
 }
