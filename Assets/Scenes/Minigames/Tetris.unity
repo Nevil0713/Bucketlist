@@ -156,7 +156,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -286,9 +286,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 982928299}
   - {fileID: 2118334250}
   - {fileID: 2063051918}
-  - {fileID: 982928299}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &666245910
@@ -307,8 +307,8 @@ MonoBehaviour:
   backgroundNode: {fileID: 2063051918}
   boardNode: {fileID: 2118334250}
   tet_blockNode: {fileID: 982928299}
-  boardWidth: 10
-  boardHeight: 16
+  boardWidth: 8
+  boardHeight: 14
   fallCycle: 1
 --- !u!1 &982928298
 GameObject:
