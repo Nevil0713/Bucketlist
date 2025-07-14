@@ -1,4 +1,8 @@
+using System.Security.Cryptography.X509Certificates;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Tet_Stage : MonoBehaviour
 {
@@ -8,7 +12,13 @@ public class Tet_Stage : MonoBehaviour
     public Transform backgroundNode;
     public Transform boardNode;
     public Transform tet_blockNode;
-    public Transform gameoverPanel;
+
+    [Header("Panel Settings")]
+    public GameObject gameoverPanel;
+    public GameObject UI_score;
+    public TMP_Text Score;
+    public TMP_Text Target;
+    public TMP_Text Line;
 
     //Setting Game Space...?
     [Header("Game Settings")]
@@ -23,8 +33,13 @@ public class Tet_Stage : MonoBehaviour
 
     private float nextFallTime;
 
+    private int scoreVal = 0;
+    private int targetVal = 3000;
+    private int lineVal;
+
     private void Start()
     {
+        gameoverPanel.SetActive(false);
 
         halfWidth = (int)(boardWidth * 0.5f);
         halfHeight = (int)(boardHeight * 0.5f);
@@ -74,6 +89,14 @@ public class Tet_Stage : MonoBehaviour
             }
         }
 
+        if (gameoverPanel.activeSelf)
+        {
+            if (Input.GetKeyDown("r"))
+            {
+                SceneManager.LoadScene(0);
+            }
+        }
+
         //fall automatically
         if (Time.time > nextFallTime)
         {
@@ -109,6 +132,12 @@ public class Tet_Stage : MonoBehaviour
                 AddToBoard(tet_blockNode);
                 CheckBoardColumn();
                 CreateBlock();
+
+                if (!canMoveTo(tet_blockNode))
+                {
+                    gameoverPanel.SetActive(true);
+                    UI_score.SetActive(false);
+                }
             }
 
             return false;
@@ -134,6 +163,8 @@ public class Tet_Stage : MonoBehaviour
     {
         bool isCleared = false;
 
+        int lineCount = 0;
+
         foreach (Transform column in boardNode)
         {
             if(column.childCount == boardWidth)
@@ -145,7 +176,25 @@ public class Tet_Stage : MonoBehaviour
 
                 column.DetachChildren();
                 isCleared = true;
+                    lineCount++;
             }
+        }
+        if (lineCount != 0)
+        {
+            scoreVal += lineCount * lineCount * 200;
+            Score.text = "" + scoreVal;
+        }
+
+        if (lineCount != 0)
+        {
+            lineVal -= 1;
+            if (lineVal <= 0 && scoreVal == targetVal)
+            {
+                targetVal = 3000;
+                lineVal = targetVal % 200;
+            }
+            Target.text = "Target Score: 3000";
+            Line.text = "Lines Left: " + lineVal;
         }
 
         if (isCleared)
@@ -228,7 +277,7 @@ public class Tet_Stage : MonoBehaviour
         Color color = Color.gray;
 
         //board
-        color.a = 0.8f;
+        color.a = 0.6f;
         for (int x = -halfWidth; x < halfWidth; x++)
         {
             for(int y = halfHeight; y > -halfHeight; --y)
