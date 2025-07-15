@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
-public class Tet_Stage : MonoBehaviour
+public class Teto_Stage : MonoBehaviour
 {
     //Object linked with U6 Editor
     [Header("Editor Objects")]
@@ -154,7 +154,10 @@ public class Tet_Stage : MonoBehaviour
 
                 if (!canMoveTo(tet_blockNode))
                 {
-                    Invoke("gameOver_setters", 1.0f);
+                    if (scoreVal != targetVal)
+                    {
+                        Invoke("gameOver_setters", 1.0f);
+                    }
                 }
             }
 
@@ -208,6 +211,7 @@ public class Tet_Stage : MonoBehaviour
         {
             if (scoreVal == targetVal || scoreVal == 3000)
             {
+                scoreVal = 3000;
                 Invoke("gameOver_setters", 1.0f);
             }
             Target.text = "Target Score: 3000";
