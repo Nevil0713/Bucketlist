@@ -49,19 +49,22 @@ public class DialogueView : MonoBehaviour
         choicePanel.SetActive(true);
 
         foreach (Transform child in choicePanel.transform)
-            GameObject.Destroy(child.gameObject);
+            Destroy(child.gameObject);
 
         foreach (var choice in pChoices)
         {
-            var localChoice = choice; // 클로저 문제 해결
+            var localChoice = choice;
+
             Button btn = Instantiate(choiceButtonPrefab, choicePanel.transform);
             btn.GetComponentInChildren<Text>().text = localChoice.text;
+
             btn.onClick.AddListener(() =>
             {
                 m_onChoiceSelected?.Invoke(localChoice.nextScene);
             });
         }
     }
+
 
     public void HideChoices()
     {
