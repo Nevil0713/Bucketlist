@@ -14,6 +14,11 @@ public class FlipAndMatchObject : MonoBehaviour
 
     private void Awake()
     {
+        Init();
+    }
+
+    public void Init()
+    {
         m_image = GetComponent<Image>();
         m_image.sprite = backSprite;
         m_manager = FindAnyObjectByType<FlipAndMatchManager>();

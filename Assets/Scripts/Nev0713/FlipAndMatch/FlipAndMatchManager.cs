@@ -16,18 +16,18 @@ public class FlipAndMatchManager : MonoBehaviour
 
     private void Awake()
     {
-        cards = GetComponentsInChildren<FlipAndMatchObject>();
         Init();
     }
 
-    private void Init()
+    public void Init()
     {
+        cards = GetComponentsInChildren<FlipAndMatchObject>();
         List<Sprite> sprites = GetShuffledSpritePairs();
-
         for (int i = 0; i < cards.Length; i++)
         {
             cards[i].SetFrontSprite(sprites[i]);
         }
+        m_currentScore = 0;
     }
 
     public void OnCardClicked(FlipAndMatchObject pCard)
