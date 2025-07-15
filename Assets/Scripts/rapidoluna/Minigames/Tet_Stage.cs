@@ -17,6 +17,7 @@ public class Tet_Stage : MonoBehaviour
 
     [Header("Panel/UI Settings")]
     public GameObject gameoverPanel;
+    public GameObject gamedonePanel;
     public GameObject UI_score;
     public TMP_Text Score;
     public TMP_Text Target;
@@ -45,6 +46,7 @@ public class Tet_Stage : MonoBehaviour
     {
         Gauge.fillAmount = 0.1f;
         gameoverPanel.SetActive(false);
+        gamedonePanel.SetActive(false);
 
         halfWidth = (int)(boardWidth * 0.5f);
         halfHeight = (int)(boardHeight * 0.5f);
@@ -93,8 +95,9 @@ public class Tet_Stage : MonoBehaviour
             {
             }
         }
-
-        if (gameoverPanel.activeSelf)
+        
+        //ÄÁÆ¼´º
+        if (gameoverPanel.activeSelf || gamedonePanel.activeSelf)
         {
             if (Input.GetKeyDown("r"))
             {
@@ -120,6 +123,11 @@ public class Tet_Stage : MonoBehaviour
     void gameOver_setters()
     {
         gameoverPanel.SetActive(true);
+        if (scoreVal == targetVal)
+        {
+            gamedonePanel.SetActive(true);
+            gameoverPanel.SetActive(false);
+        }
         UI_score.SetActive(false);
     }
     bool moveTeto(Vector3 moveDir, bool isRotate)
@@ -191,7 +199,7 @@ public class Tet_Stage : MonoBehaviour
         }
         if (lineCount != 0)
         {
-            scoreVal += lineCount * 200;
+            scoreVal += 200;
             Score.text = "" + scoreVal;
             ScoreGauge();
         }
