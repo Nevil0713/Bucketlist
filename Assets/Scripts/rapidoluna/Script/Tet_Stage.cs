@@ -22,6 +22,7 @@ public class Tet_Stage : MonoBehaviour
     public TMP_Text Target;
     public Image Gauge;
 
+
     //Setting Game Space...?
     [Header("Game Settings")]
     [Range(4, 40)]
@@ -145,7 +146,7 @@ public class Tet_Stage : MonoBehaviour
 
                 if (!canMoveTo(tet_blockNode))
                 {
-                    Invoke("gameOver_setters", 0.25f);
+                    Invoke("gameOver_setters", 1.0f);
                 }
             }
 
@@ -199,7 +200,7 @@ public class Tet_Stage : MonoBehaviour
         {
             if (scoreVal == targetVal || scoreVal == 3000)
             {
-                Invoke("gameOver_setters", 0.25f);
+                Invoke("gameOver_setters", 1.0f);
             }
             Target.text = "Target Score: 3000";
         }
