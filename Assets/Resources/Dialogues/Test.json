@@ -1,0 +1,23 @@
+{
+    "sceneName" : "Test1",
+    "background" : "testBackground",
+    "dialogues" :
+    [
+        {
+            "character" : "Character",
+            "text" : "테스트 대사",
+            "expression" : "calm",
+            "choices" :
+            [
+                {
+                    "text" : "첫 번째 선택지",
+                    "nextScene" : "TestChoice1"
+                },
+                {
+                    "text" : "두 번째 선택지",
+                    "nextScene" : "TestChoice2"
+                }
+            ]
+        }
+    ]
+}

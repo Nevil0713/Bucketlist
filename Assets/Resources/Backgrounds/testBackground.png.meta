@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a6cecaf7914af5d42b4292f4642b1ff0
+guid: 45d49b8175e7be14c92a91ecfa0de9d0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1879601243995596184
-    second: temp_gauge_star_0
+      213: -9189414618912277186
+    second: testBackground_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: temp_gauge_star_0
+      name: testBackground_0
       rect:
         serializedVersion: 2
-        x: 36
-        y: 36
-        width: 184
-        height: 184
+        x: 0
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 86a924c80a05ae5e0800000000000000
-      internalID: -1879601243995596184
+      spriteID: e3db3f97714a87080800000000000000
+      internalID: -9189414618912277186
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      temp_gauge_star_0: -1879601243995596184
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

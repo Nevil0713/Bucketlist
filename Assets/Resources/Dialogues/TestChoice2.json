@@ -1,0 +1,12 @@
+{
+    "sceneName" : "TestChoice2",
+    "background" : "testBackground",
+    "dialogues" :
+    [
+        {
+            "character" : "Character",
+            "text" : "두 번째 선택지 대사",
+            "expression" : "calm"
+        }
+    ]
+}
