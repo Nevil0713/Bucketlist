@@ -119,6 +119,60 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &453387245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 453387247}
+  - component: {fileID: 453387246}
+  m_Layer: 0
+  m_Name: bubblegridmanager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &453387246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453387245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 179a9d2e70e80404fa0ab8de059f1c6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubblePrefab: {fileID: 8244270641375082709, guid: 7dcd44624fe3b144d822395bb7548579, type: 3}
+  bubbleColors:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0.97946084, g: 1, b: 0, a: 1}
+  - {r: 0, g: 1, b: 0.24759483, a: 1}
+  - {r: 0, g: 0.14127159, b: 1, a: 1}
+  - {r: 1, g: 0, b: 0.865252, a: 1}
+  columns: 8
+  rows: 5
+  spacing: 0.9
+--- !u!4 &453387247
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453387245}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3, y: 6.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &669328772
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +301,7 @@ Transform:
   m_GameObject: {fileID: 669328772}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.28, y: -0.03, z: 0}
+  m_LocalPosition: {x: 4.29, y: -0.03, z: 0}
   m_LocalScale: {x: 0.2, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -286,6 +340,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bubblePrefab: {fileID: 8244270641375082709, guid: 7dcd44624fe3b144d822395bb7548579, type: 3}
   shootForce: 500
+  bubbleColors:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 1, g: 0.87512237, b: 0, a: 1}
+  - {r: 0, g: 1, b: 0.05449891, a: 1}
+  - {r: 0, g: 0.10881472, b: 1, a: 1}
+  - {r: 1, g: 0, b: 0.8246989, a: 1}
 --- !u!212 &1097013048
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -350,7 +410,7 @@ Transform:
   m_GameObject: {fileID: 1097013046}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -3.63, z: 0}
+  m_LocalPosition: {x: -0.02, y: -3.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -368,8 +428,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a47816125abd7448a016157ce0b30e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bubblePrefab: {fileID: 8244270641375082709, guid: 7dcd44624fe3b144d822395bb7548579, type: 3}
+  bubblePrefab: {fileID: 0}
   shootForce: 500
+  bubbleColors: []
 --- !u!1 &2017195364
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +559,7 @@ Transform:
   m_GameObject: {fileID: 2017195364}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.4, y: -0.03, z: 0}
+  m_LocalPosition: {x: -4.3, y: -0.1, z: 0}
   m_LocalScale: {x: 0.2, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -540,8 +601,8 @@ Camera:
   m_GameObject: {fileID: 2111110864}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 1, g: 0.7327044, b: 0.7777472, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -649,3 +710,4 @@ SceneRoots:
   - {fileID: 1097013049}
   - {fileID: 2017195367}
   - {fileID: 669328775}
+  - {fileID: 453387247}
