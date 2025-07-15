@@ -1,15 +1,16 @@
 {
-    "sceneName" : "Test1",
-    "background" : "testBackground",
+    "sceneName" : "Intro",
     "dialogues" :
     [
         {
             "character" : "Character",
+            "background" : "Hospital",
             "text" : "대사 1",
             "expression" : "calm"
         },
         {
             "character" : "Character",
+            "background" : "Beach",
             "text" : "대사 2",
             "expression" : "calm"
         },

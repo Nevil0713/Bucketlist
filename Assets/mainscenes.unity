@@ -128,7 +128,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 453387247}
-  - component: {fileID: 453387246}
   m_Layer: 0
   m_Name: bubblegridmanager
   m_TagString: Untagged
@@ -136,28 +135,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &453387246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 453387245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 179a9d2e70e80404fa0ab8de059f1c6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bubblePrefab: {fileID: 8244270641375082709, guid: 7dcd44624fe3b144d822395bb7548579, type: 3}
-  bubbleColors:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0.97946084, g: 1, b: 0, a: 1}
-  - {r: 0, g: 1, b: 0.24759483, a: 1}
-  - {r: 0, g: 0.14127159, b: 1, a: 1}
-  - {r: 1, g: 0, b: 0.865252, a: 1}
-  columns: 8
-  rows: 5
-  spacing: 0.9
 --- !u!4 &453387247
 Transform:
   m_ObjectHideFlags: 0
@@ -318,7 +295,6 @@ GameObject:
   - component: {fileID: 1097013049}
   - component: {fileID: 1097013048}
   - component: {fileID: 1097013047}
-  - component: {fileID: 1097013050}
   m_Layer: 0
   m_Name: shooter
   m_TagString: Untagged
@@ -339,13 +315,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bubblePrefab: {fileID: 8244270641375082709, guid: 7dcd44624fe3b144d822395bb7548579, type: 3}
-  shootForce: 500
   bubbleColors:
   - {r: 1, g: 0, b: 0, a: 1}
   - {r: 1, g: 0.87512237, b: 0, a: 1}
   - {r: 0, g: 1, b: 0.05449891, a: 1}
   - {r: 0, g: 0.10881472, b: 1, a: 1}
   - {r: 1, g: 0, b: 0.8246989, a: 1}
+  shootForce: 500
+  bubbleManagerTransform: {fileID: 0}
 --- !u!212 &1097013048
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -416,21 +393,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1097013050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1097013046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a47816125abd7448a016157ce0b30e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bubblePrefab: {fileID: 0}
-  shootForce: 500
-  bubbleColors: []
 --- !u!1 &2017195364
 GameObject:
   m_ObjectHideFlags: 0

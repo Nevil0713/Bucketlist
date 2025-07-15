@@ -30,7 +30,6 @@ public class BubbleShooter : MonoBehaviour
     {
         if (previewBubble == null) return;
 
-        previewBubble.GetComponent<Rigidbody2D>().isKinematic = false;
         previewBubble.GetComponent<Rigidbody2D>().AddForce(GetShootDirection() * shootForce);
 
         shootCount++;  // 발사횟수 증가
@@ -49,7 +48,6 @@ public class BubbleShooter : MonoBehaviour
     {
         Vector3 spawnPos = transform.position;
         previewBubble = Instantiate(bubblePrefab, spawnPos, Quaternion.identity);
-        previewBubble.GetComponent<Rigidbody2D>().isKinematic = true;
         previewBubble.GetComponent<SpriteRenderer>().color = bubbleColors[Random.Range(0, bubbleColors.Length)];
     }
 

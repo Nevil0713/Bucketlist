@@ -1,13 +1,15 @@
 using System;
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using System.ComponentModel;
 
 [Serializable]
 public class Choice
 {
     public string text;
-    public string nextScene;
+    public string nextDIalogue;
 }
 
 [Serializable]
@@ -16,14 +18,15 @@ public class DialogueLine
     public string character;
     public string text;
     public string expression;
+    public string background;
+    public string scene;
     public List<Choice> choices;
 }
 
 [Serializable]
-public class SceneData
+public class DialogueData
 {
-    public string sceneName;
-    public string background;
+    public string dialogueName;
     public List<DialogueLine> dialogues;
 }
 
@@ -38,38 +41,45 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Image backgroundImage;
     [SerializeField] private string backgroundFolder = "Backgrounds";
 
-    private SceneData currentScene;
+    private DialogueData currentDIalogue;
+    private string currentBackground;
     private int dialogueIndex = 0;
 
-    void Start()
+    private void Awake()
     {
-        LoadDialogue("Dialogues/Test"); // Resources/Dialogs/Test.json
-        ShowCurrentDialogue();
+        LoadDialogue("Dialogues/Intro");
+        StartCoroutine(ShowCurrentDialogue());
     }
 
-    void LoadDialogue(string fileName)
+    private void LoadDialogue(string pFileName)
     {
-        TextAsset json = Resources.Load<TextAsset>(fileName);
-        currentScene = JsonUtility.FromJson<SceneData>(json.text);
+        TextAsset json = Resources.Load<TextAsset>(pFileName);
+        currentDIalogue = JsonUtility.FromJson<DialogueData>(json.text);
         dialogueIndex = 0;
 
-        backgroundImage.sprite = Resources.Load<Sprite>($"{backgroundFolder}/{currentScene.background}");
     }
 
-    void ShowCurrentDialogue()
+    private IEnumerator ShowCurrentDialogue()
     {
-        if (dialogueIndex >= currentScene.dialogues.Count)
+        if (dialogueIndex >= currentDIalogue.dialogues.Count)
         {
             Debug.Log("대화 종료");
-            return;
+            yield break;
         }
 
-        DialogueLine line = currentScene.dialogues[dialogueIndex];
+        DialogueLine line = currentDIalogue.dialogues[dialogueIndex];
 
         characterNameText.text = line.character;
         dialogueText.text = line.text;
 
-        // 선택지가 있는 경우
+        if(line.background != currentBackground)
+        {
+            currentBackground = line.background;
+            //페이드인
+            backgroundImage.sprite = Resources.Load<Sprite>($"{backgroundFolder}/{line.background}");
+            //페이드아웃
+        }
+
         if (line.choices != null && line.choices.Count > 0)
         {
             ShowChoices(line.choices);
@@ -77,27 +87,22 @@ public class DialogueManager : MonoBehaviour
         else
         {
             // 다음 대사로 넘기기 (예: 클릭으로 진행)
-            Invoke(nameof(WaitForNext), 2f); // 자동으로 다음 대사 (예시)
+            dialogueIndex++;
+            yield return new WaitForSeconds(1);
+            StartCoroutine(ShowCurrentDialogue());
         }
     }
 
-    void WaitForNext()
-    {
-        dialogueIndex++;
-        ShowCurrentDialogue();
-    }
-
-    void ShowChoices(List<Choice> choices)
+    void ShowChoices(List<Choice> pChoices)
     {
         choicePanel.SetActive(true);
 
-        // 기존 버튼 제거
         foreach (Transform child in choicePanel.transform)
         {
             Destroy(child.gameObject);
         }
 
-        foreach (Choice choice in choices)
+        foreach (Choice choice in pChoices)
         {
             Button button = Instantiate(choiceButtonPrefab, choicePanel.transform);
             button.GetComponentInChildren<Text>().text = choice.text;
@@ -105,8 +110,8 @@ public class DialogueManager : MonoBehaviour
             button.onClick.AddListener(() =>
             {
                 choicePanel.SetActive(false);
-                LoadDialogue($"Dialogues/{choice.nextScene}");
-                ShowCurrentDialogue();
+                LoadDialogue($"Dialogues/{choice.nextDIalogue}");
+                StartCoroutine(ShowCurrentDialogue());
             });
         }
     }
@@ -114,10 +119,10 @@ public class DialogueManager : MonoBehaviour
     // 대사를 클릭으로 넘기고 싶을 경우:
     public void OnDialogueClick()
     {
-        if (currentScene.dialogues[dialogueIndex].choices == null)
+        if (currentDIalogue.dialogues[dialogueIndex].choices == null)
         {
             dialogueIndex++;
-            ShowCurrentDialogue();
+            StartCoroutine(ShowCurrentDialogue());
         }
     }
 }
