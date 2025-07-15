@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class Tet_Stage : MonoBehaviour
 {
@@ -12,13 +13,14 @@ public class Tet_Stage : MonoBehaviour
     public Transform backgroundNode;
     public Transform boardNode;
     public Transform tet_blockNode;
+    public Transform previewNode;
 
-    [Header("Panel Settings")]
+    [Header("Panel/UI Settings")]
     public GameObject gameoverPanel;
     public GameObject UI_score;
     public TMP_Text Score;
     public TMP_Text Target;
-    public TMP_Text Line;
+    public Image Gauge;
 
     //Setting Game Space...?
     [Header("Game Settings")]
@@ -35,10 +37,12 @@ public class Tet_Stage : MonoBehaviour
 
     private int scoreVal = 0;
     private int targetVal = 3000;
-    private int lineVal;
+
+    private int indexVal = -1;
 
     private void Start()
     {
+        Gauge.fillAmount = 0.1f;
         gameoverPanel.SetActive(false);
 
         halfWidth = (int)(boardWidth * 0.5f);
@@ -111,6 +115,12 @@ public class Tet_Stage : MonoBehaviour
         }
     }
 
+    //active to end the game
+    void gameOver_setters()
+    {
+        gameoverPanel.SetActive(true);
+        UI_score.SetActive(false);
+    }
     bool moveTeto(Vector3 moveDir, bool isRotate)
     {
         Vector3 oldPos = tet_blockNode.transform.position;
@@ -135,8 +145,7 @@ public class Tet_Stage : MonoBehaviour
 
                 if (!canMoveTo(tet_blockNode))
                 {
-                    gameoverPanel.SetActive(true);
-                    UI_score.SetActive(false);
+                    Invoke("gameOver_setters", 0.25f);
                 }
             }
 
@@ -181,20 +190,18 @@ public class Tet_Stage : MonoBehaviour
         }
         if (lineCount != 0)
         {
-            scoreVal += lineCount * lineCount * 200;
+            scoreVal += lineCount * 200;
             Score.text = "" + scoreVal;
+            ScoreGauge();
         }
 
         if (lineCount != 0)
         {
-            lineVal -= 1;
-            if (lineVal <= 0 && scoreVal == targetVal)
+            if (scoreVal == targetVal || scoreVal == 3000)
             {
-                targetVal = 3000;
-                lineVal = targetVal % 200;
+                Invoke("gameOver_setters", 0.25f);
             }
             Target.text = "Target Score: 3000";
-            Line.text = "Lines Left: " + lineVal;
         }
 
         if (isCleared)
@@ -232,6 +239,12 @@ public class Tet_Stage : MonoBehaviour
             }
         }
     }
+    //score gauge bar
+    void ScoreGauge()
+    {
+        Gauge.fillAmount += 0.06f;
+    }
+
 
     //in board move checker
     bool canMoveTo(Transform root)
@@ -304,8 +317,14 @@ public class Tet_Stage : MonoBehaviour
     //creates tet_block
     void CreateBlock()
     {
-        int index = Random.Range(0, 7);
+        int index;
         Color32 color = Color.white;
+
+        if (indexVal == -1)
+        {
+            index = Random.Range(0, 7);
+        }
+        else index = indexVal;
 
         tet_blockNode.rotation = Quaternion.identity;
         tet_blockNode.position = new Vector2(0, halfHeight - 1);
@@ -389,7 +408,102 @@ public class Tet_Stage : MonoBehaviour
                 
                 break;
         }
+        CreatePre();
 
     }
 
+    void CreatePre()
+    {
+        foreach(Transform tile in previewNode)
+        {
+            Destroy(tile.gameObject);
+        }
+        previewNode.DetachChildren();
+
+        indexVal = Random.Range(0, 7);
+
+        Color32 color = Color.white;
+
+        previewNode.position = new Vector2(halfWidth + 6.2f, halfHeight - 5);
+
+        switch(indexVal)
+        {
+            //I 모양
+            case 0:
+                color = new Color32(115, 251, 253, 255);
+
+                CreateTile(previewNode, new Vector2(-2f, 0f), color);
+                CreateTile(previewNode, new Vector2(-1f, 0f), color);
+                CreateTile(previewNode, new Vector2(0f, 0f), color);
+                CreateTile(previewNode, new Vector2(1f, 0f), color);
+
+                break;
+
+            //J 모양
+            case 1:
+                color = new Color32(0, 33, 245, 255);
+
+                CreateTile(previewNode, new Vector2(-1f, 0f), color);
+                CreateTile(previewNode, new Vector2(0f, 0f), color);
+                CreateTile(previewNode, new Vector2(1f, 0f), color);
+                CreateTile(previewNode, new Vector2(-1f, 1f), color);
+
+                break;
+
+            //L 모양
+            case 2:
+                color = new Color32(243, 168, 59, 255);
+
+                CreateTile(previewNode, new Vector2(-1f, 0f), color);
+                CreateTile(previewNode, new Vector2(0f, 0f), color);
+                CreateTile(previewNode, new Vector2(1f, 0f), color);
+                CreateTile(previewNode, new Vector2(1f, 1f), color);
+
+                break;
+
+            //O 모양
+            case 3:
+                color = new Color32(255, 253, 84, 255);
+
+                CreateTile(previewNode, new Vector2(0f, 0f), color);
+                CreateTile(previewNode, new Vector2(1f, 0f), color);
+                CreateTile(previewNode, new Vector2(0f, 1f), color);
+                CreateTile(previewNode, new Vector2(1f, 1f), color);
+
+                break;
+
+            //S 모양
+            case 4:
+                color = new Color32(117, 250, 76, 255);
+
+                CreateTile(previewNode, new Vector2(-1f, -1f), color);
+                CreateTile(previewNode, new Vector2(0f, -1f), color);
+                CreateTile(previewNode, new Vector2(0f, 0f), color);
+                CreateTile(previewNode, new Vector2(1f, 0f), color);
+
+                break;
+
+            //T 모양
+            case 5:
+                color = new Color32(155, 47, 246, 255);
+
+                CreateTile(previewNode, new Vector2(-1f, 0f), color);
+                CreateTile(previewNode, new Vector2(0f, 0f), color);
+                CreateTile(previewNode, new Vector2(1f, 0f), color);
+                CreateTile(previewNode, new Vector2(0f, 1f), color);
+
+                break;
+
+            //Z 모양
+            case 6:
+                color = new Color32(235, 51, 35, 255);
+
+                CreateTile(previewNode, new Vector2(-1f, 1f), color);
+                CreateTile(previewNode, new Vector2(0f, 1f), color);
+                CreateTile(previewNode, new Vector2(0f, 0f), color);
+                CreateTile(previewNode, new Vector2(1f, 0f), color);
+
+                break;
+        }
+    }
 }

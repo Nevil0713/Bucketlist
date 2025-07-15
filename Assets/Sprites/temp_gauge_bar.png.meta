@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d8fe3014557e5c34b8569f195d68e0bd
+guid: 03c1fe3ae4c77de4e87f178b5df17b0c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4549871927518758641
-    second: Test_0
+      213: 4020633434513976101
+    second: temp_gauge_bar_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Test_0
+      name: temp_gauge_bar_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 192
-        height: 192
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f09f8b2969b9bd0c0800000000000000
-      internalID: -4549871927518758641
+      spriteID: 52ba3447ec82cc730800000000000000
+      internalID: 4020633434513976101
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Test_0: -4549871927518758641
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
