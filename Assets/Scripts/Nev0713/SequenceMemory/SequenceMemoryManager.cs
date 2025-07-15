@@ -1,8 +1,7 @@
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Unity.VisualScripting;
 
 public class SequenceMemoryManager : MonoBehaviour
 {
@@ -21,7 +20,7 @@ public class SequenceMemoryManager : MonoBehaviour
     private void Init()
     {
         m_buttons = GetComponentsInChildren<SequenceMemoryObject>();
-        for(int i = 0; i < m_buttons.Length; i++)
+        for (int i = 0; i < m_buttons.Length; i++)
         {
             m_buttons[i].SetButtonNumber(i);
         }
@@ -36,10 +35,9 @@ public class SequenceMemoryManager : MonoBehaviour
 
     public IEnumerator StartRound()
     {
-        for(int i = 0; i < m_buttons.Length; i++)
+        for (int i = 0; i < m_buttons.Length; i++)
         {
-            m_buttons[i].GetComponent<Button>().interactable = false;
-            m_buttons[i].GetComponent<Image>().color = Color.white;
+            SetButton(i, false, Color.white);
         }
 
         m_sequence = GetRandomNumbers(m_targetStep, m_buttons.Length);
@@ -52,7 +50,7 @@ public class SequenceMemoryManager : MonoBehaviour
         }
         yield return new WaitForSeconds(1);
 
-        for(int i = 0; i < m_buttons.Length; i++)
+        for (int i = 0; i < m_buttons.Length; i++)
         {
             m_buttons[i].GetComponent<Button>().interactable = true;
         }
@@ -87,9 +85,9 @@ public class SequenceMemoryManager : MonoBehaviour
         return result;
     }
 
-    public void OnButtonClicked(int pButtonNumber)
+    public IEnumerator OnButtonClicked(int pButtonNumber)
     {
-        if(m_sequence[m_currentStep] == pButtonNumber)
+        if (m_sequence[m_currentStep] == pButtonNumber)
         {
             Debug.Log("Correct");
             m_currentStep++;
@@ -101,10 +99,27 @@ public class SequenceMemoryManager : MonoBehaviour
                 m_targetStep = m_currentRound;
                 m_currentStep = 0;
 
-                if(m_currentRound > m_targetRound)
+                if (m_currentRound > m_targetRound)
                 {
+                    for (int i = 0; i < m_buttons.Length; i++)
+                    {
+                        SetButton(i, false);
+                    }
+
                     GameClear();
-                    return;
+                    yield break;
+                }
+
+                for (int i = 0; i < m_buttons.Length; i++)
+                {
+                    SetButton(i, false, Color.green);
+                }
+
+                yield return new WaitForSeconds(1);
+
+                for (int i = 0; i < m_buttons.Length; i++)
+                {
+                    SetButton(i, Color.white);
                 }
 
                 StartCoroutine(StartRound());
@@ -116,8 +131,37 @@ public class SequenceMemoryManager : MonoBehaviour
             m_currentRound = 1;
             m_targetStep = m_currentRound;
             m_currentStep = 0;
+
+            for (int i = 0; i < m_buttons.Length; i++)
+            {
+                SetButton(i, false, Color.red);
+            }
+
+            yield return new WaitForSeconds(1);
+
+            for (int i = 0; i < m_buttons.Length; i++)
+            {
+                SetButton(i, Color.white);
+            }
+
             StartCoroutine(StartRound());
         }
+    }
+
+    private void SetButton(int pNumber, bool pValue, Color pColor)
+    {
+        m_buttons[pNumber].GetComponent<Button>().interactable = pValue;
+        m_buttons[pNumber].GetComponent<Image>().color = pColor;
+    }
+
+    private void SetButton(int pNumber, Color pColor)
+    {
+        m_buttons[pNumber].GetComponent<Image>().color = pColor;
+    }
+
+    private void SetButton(int pNumber, bool pValue)
+    {
+        m_buttons[pNumber].GetComponent<Button>().interactable = pValue;
     }
 
     private void GameClear()

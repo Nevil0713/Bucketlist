@@ -27,6 +27,7 @@ public class SequenceMemoryObject : MonoBehaviour
     {
         Debug.Log("Clicked");
         GetComponent<Image>().color = Color.black;
-        m_manager.OnButtonClicked(buttonNumber);
+        GetComponent<Button>().interactable = false;
+        StartCoroutine(m_manager.OnButtonClicked(buttonNumber));
     }
 }
