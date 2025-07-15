@@ -4,9 +4,11 @@
     "dialogues" :
     [
         {
-            "character" : "Character",
+            "character" : "c1",
+            "characterSprite": null,
             "text" : "첫 번째 선택지 대사",
-            "expression" : "calm"
+            "background" : "Hospital",
+            "choices" : null
         }
     ]
 }

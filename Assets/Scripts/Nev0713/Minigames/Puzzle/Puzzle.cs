@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class Puzzle : MonoBehaviour
 {
     [SerializeField] private PuzzleObject[] puzzles;

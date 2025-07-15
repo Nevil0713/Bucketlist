@@ -3,21 +3,24 @@
     "dialogues" :
     [
         {
-            "character" : "Character",
-            "background" : "Hospital",
+            "character" : "c1",
+            "characterSprite": null,
             "text" : "대사 1",
-            "expression" : "calm"
+            "background" : "Hospital",
+            "choices" : null
         },
         {
-            "character" : "Character",
-            "background" : "Beach",
+            "character" : "c1",
+            "characterSprite": null,
             "text" : "대사 2",
-            "expression" : "calm"
+            "background" : "Beach",
+            "choices" : null
         },
         {
-            "character" : "Character",
+            "character" : "c1",
+            "characterSprite": null,
             "text" : "대사 선택지",
-            "expression" : "calm",
+            "background" : "Beach",
             "choices" :
             [
                 {
