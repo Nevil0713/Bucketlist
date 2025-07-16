@@ -5,6 +5,7 @@ public class DialogueController : MonoBehaviour
 {
     [SerializeField] private DialogueView dialogueView;
     [SerializeField] private InputHandler inputHandler;
+    [SerializeField] private string nextSceneName;
 
     private IDialogueLoader m_dialogueLoader = new JsonDialogueLoader();
     private SceneLoader m_sceneLoader = new SceneLoader();
@@ -41,7 +42,7 @@ public class DialogueController : MonoBehaviour
 
         if (m_dialogueIndex >= m_currentScene.dialogues.Count)
         {
-            ChangeScene("NextScene");
+            ChangeScene(nextSceneName);
             return;
         }
 
@@ -98,19 +99,20 @@ public class DialogueController : MonoBehaviour
 
 
     private IEnumerator TypeSentence(string pSentence, System.Action pOnComplete)
+{
+    m_isTyping = true;
+    dialogueView.SetDialogueText("");
+
+    foreach (char letter in pSentence)
     {
-        m_isTyping = true;
-        dialogueView.SetDialogueText("");
-
-        foreach (char letter in pSentence)
-        {
-            dialogueView.AppendDialogueLetter(letter);
-            yield return new WaitForSeconds(m_textSpeed);
-        }
-
-        m_isTyping = false;
-        pOnComplete?.Invoke();
+        dialogueView.AppendDialogueLetter(letter);
+        yield return new WaitForSeconds(m_textSpeed);
     }
+
+    m_isTyping = false;
+    yield return new WaitForSeconds(1f);
+    pOnComplete?.Invoke();
+}
 
     private void OnScreenClicked()
     {

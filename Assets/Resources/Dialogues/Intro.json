@@ -3,6 +3,38 @@
     "dialogues" :
     [
         {
+            "character" : "",
+            "characterName" : "",
+            "characterSprite" : "",
+            "text" : "작년 겨울, 나는 시한부 진단을 받았다.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterName" : "",
+            "characterSprite" : "",
+            "text" : "병원 생활을 하며 죽음을 기다리고 있었기에, 때가 되면 덤덤하게 받아들일 수 있을 줄 알았으나",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterName" : "",
+            "characterSprite" : "",
+            "text" : "막상 의사 선생님의 말을 들으니 숨이 턱 막히는 것 같았다.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterName" : "",
+            "characterSprite" : "",
+            "text" : "그렇게 8개월이라는 시간이 흘렀고, 여름이 찾아왔다.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
             "character" : null,
             "characterSprite" : null,
             "text" : null,
@@ -18,23 +50,68 @@
         {
             "character" : "Soyeong",
             "characterName" : "소영",
-            "characterSprite" : "Hospital1",
-            "text" : "대사 2",
-            "background" : "Hospital",
-            "choices" : null
-        },
-        {
-            "character" : "Soyeong",
-            "characterName" : "소영",
             "characterSprite" : "Hospital2",
-            "text" : "대사 3",
+            "text" : "\"...\"",
+            "background" : "Hospital",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterName" : "",
+            "characterSprite" : "Hospital1",
+            "text" : "또 하루, 지루한 날이 지나가고 있었고",
             "background" : "Hospital",
             "choices" : null
         },
         {
             "character" : "Soyeong",
             "characterName" : "소영",
-            "characterSprite" : "Dream1",
+            "characterSprite" : "Hospital1",
+            "text" : "\"나는 오늘도 핸드폰이나 만지작거리다 잠들겠지.\"",
+            "background" : "Hospital",
+            "choices" : null
+        },
+        {
+            "character" : null,
+            "characterSprite" : null,
+            "text" : null,
+            "background" : "Hospital",
+            "choices" :
+            [
+                {
+                    "text" : "눈을 감는다.",
+                    "nextScene" : null
+                }
+            ]
+        },
+        {
+            "character" : "",
+            "characterName" : "",
+            "characterSprite" : "",
+            "text" : "...소녀는 알지 못했다.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterName" : "",
+            "characterSprite" : "",
+            "text" : "다음날 자신이 세상을 떠난다는 것을.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterName" : "",
+            "characterSprite" : "",
+            "text" : "오늘 밤이 잠에 들 수 있는 마지막 날임을.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterName" : "",
+            "characterSprite" : "",
             "text" : "대사 선택지",
             "background" : "Beach",
             "choices" :

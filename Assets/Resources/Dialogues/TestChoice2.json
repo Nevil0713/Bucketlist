@@ -4,9 +4,9 @@
     "dialogues" :
     [
         {
-            "character" : "Soyeong",
-            "characterName" : "소영",
-            "characterSprite" : "Dream3",
+            "character" : "Haru",
+            "characterName" : "하루",
+            "characterSprite" : "Stand1",
             "text" : "두 번째 선택지 대사",
             "background" : "Hospital",
             "choices" : null
