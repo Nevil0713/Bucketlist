@@ -804,6 +804,7 @@ MonoBehaviour:
   boardWidth: 10
   boardHeight: 16
   fallCycle: 1
+  Terto: {fileID: 0}
 --- !u!1 &737036609
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,6 +920,7 @@ GameObject:
   - component: {fileID: 817361274}
   - component: {fileID: 817361275}
   - component: {fileID: 817361277}
+  - component: {fileID: 817361278}
   m_Layer: 0
   m_Name: Temp_Player
   m_TagString: Untagged
@@ -935,8 +937,8 @@ Transform:
   m_GameObject: {fileID: 817361271}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.5695, y: 0.73, z: 0}
-  m_LocalScale: {x: 2.285978, y: 2.285978, z: 2.285978}
+  m_LocalPosition: {x: -13.12, y: -1.03, z: 0}
+  m_LocalScale: {x: 2.962399, y: 2.962399, z: 2.962399}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 666245909}
@@ -1030,6 +1032,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &817361278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817361271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf8ac3832e915cc478f05bce3bbb2fcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &859160310
 GameObject:
   m_ObjectHideFlags: 0

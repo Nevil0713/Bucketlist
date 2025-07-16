@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8c197f43daef6c54182dd8f73b40ef13
+guid: d07aec8c5da329f449effc9d0d45b0cd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7269915579583931303
-    second: BlackScreen_0
+      213: -4756761839574236109
+    second: temp_happy_3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BlackScreen_0
+      name: temp_happy_3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 95c52db4c421c1b90800000000000000
-      internalID: -7269915579583931303
+      spriteID: 3344b0f2f469cfdb0800000000000000
+      internalID: -4756761839574236109
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      BlackScreen_0: -7269915579583931303
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
