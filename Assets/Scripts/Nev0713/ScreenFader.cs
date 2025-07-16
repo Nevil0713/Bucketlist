@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System;
 using System.Collections;
 
+
 public class ScreenFader : MonoBehaviour
 {
     [SerializeField] private Image fadeImage;

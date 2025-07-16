@@ -5,8 +5,8 @@
     [
         {
             "character" : "Haru",
-            "characterName" : "하루",
-            "characterSprite" : "Stand1",
+            "characterSprite" : "Stand2",
+            "textboxSprite" : "Haru",
             "text" : "두 번째 선택지 대사",
             "background" : "Hospital",
             "choices" : null

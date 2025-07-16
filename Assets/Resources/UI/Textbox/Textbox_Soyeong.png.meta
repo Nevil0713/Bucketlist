@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1e570b8a94ceab94fabd87e10d328689
+guid: 49482db11e57ae94ca04feb7f30922b2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4164017581712698816
-    second: temp_shock_1_0
+      213: -8278557827822180910
+    second: Textbox_Soyeong_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: temp_shock_1_0
+      name: Textbox_Soyeong_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 256
+        x: 183
+        y: 29
+        width: 2209
+        height: 342
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 042988342107636c0800000000000000
-      internalID: -4164017581712698816
+      spriteID: 2d5212c6487ac1d80800000000000000
+      internalID: -8278557827822180910
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      temp_shock_1_0: -4164017581712698816
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
