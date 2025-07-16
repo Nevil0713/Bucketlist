@@ -245,7 +245,7 @@ public class Teto_Stage : MonoBehaviour
         if (lineCount != 0)
         {
             Terto.PlayHappy();
-            Invoke("Terto.HappyNo()", 1f);
+            Invoke(nameof(StopHappyWrapper), 0.9f);
 
             scoreVal += 200;
             Score.text = "" + scoreVal;
@@ -298,6 +298,13 @@ public class Teto_Stage : MonoBehaviour
             }
         }
     }
+
+    void StopHappyWrapper()
+    {
+        if (Terto != null)
+            Terto.StopHappy();
+    }
+
     //score gauge bar
     void ScoreGauge()
     {
