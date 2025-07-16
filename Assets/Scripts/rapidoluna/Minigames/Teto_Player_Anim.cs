@@ -27,6 +27,11 @@ public class Teto_Player_Anim : MonoBehaviour
         animator.SetBool("isYeah", value);
     }
 
+    public void SetShock(bool value)
+    {
+        animator.SetBool("isShock", value);
+    }
+
     private void Awake()
     {
         animator = GetComponent<Animator>();

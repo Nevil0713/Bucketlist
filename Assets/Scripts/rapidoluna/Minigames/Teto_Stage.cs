@@ -38,6 +38,7 @@ public class Teto_Stage : MonoBehaviour
     private float nextFallTime;
 
     public Teto_Player_Anim Terto;
+    public Teto_Timer Tetime;
 
     private int scoreVal = 0;
     private int targetVal = 3000;
@@ -128,22 +129,45 @@ public class Teto_Stage : MonoBehaviour
 
             Terto = FindFirstObjectByType<Teto_Player_Anim>();
         }
+
+        if (Tetime == null)
+        {
+
+            Tetime = FindFirstObjectByType<Teto_Timer>();
+        }
     }
     //active to end the game also active animation
-    void gameOver_setters()
+    public void gameOver_setters()
     {
         bool isWin = scoreVal >= targetVal;
-
+        bool isOver = Tetime.GameTime <= 0;
         if (Terto != null)
         {
-            if (isWin)
+            if (isOver)
+            {
+                Terto.SetShock(true);
+                Terto.SetSad(false);
+                gameoverPanel.SetActive(true);
+                gamedonePanel.SetActive(false);
+            }
+            else if (isWin)
+            {
                 Terto.SetYeah(true);
-            else
+                gameoverPanel.SetActive(false);
+                gamedonePanel.SetActive(true);
+            }
+            else if (!isWin)
+            {
                 Terto.SetSad(true);
+                gameoverPanel.SetActive(true);
+                gamedonePanel.SetActive(false);
+            }
+            else
+            {
+                gameoverPanel.SetActive(false);
+                gamedonePanel.SetActive(false);
+            }
         }
-
-        gamedonePanel.SetActive(isWin);
-        gameoverPanel.SetActive(!isWin);
 
         UI_score.SetActive(false);
     }
