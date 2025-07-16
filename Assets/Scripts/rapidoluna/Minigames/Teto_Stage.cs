@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Security.Cryptography.X509Certificates;
 using TMPro;
 using UnityEngine;
@@ -9,11 +10,14 @@ public class Teto_Stage : MonoBehaviour
 {
     //Object linked with U6 Editor
     [Header("Editor Objects")]
+    public GameObject dialogManager;
+    public GameObject dialogCanvas;
     public GameObject tilePrefab;
     public Transform backgroundNode;
     public Transform boardNode;
     public Transform tet_blockNode;
     public Transform previewNode;
+    public Transform boardOrigin;
 
     [Header("Panel/UI Settings")]
     public GameObject gameoverPanel;
@@ -22,7 +26,6 @@ public class Teto_Stage : MonoBehaviour
     public TMP_Text Score;
     public TMP_Text Target;
     public Image Gauge;
-
 
     //Setting Game Space...?
     [Header("Game Settings")]
@@ -41,9 +44,11 @@ public class Teto_Stage : MonoBehaviour
     public Teto_Timer Tetime;
 
     private int scoreVal = 0;
-    private int targetVal = 3000;
+    private int targetVal = 2000;
 
     private int indexVal = -1;
+
+    private bool m_gameEnded = false;
 
     private void Start()
     {
@@ -61,7 +66,7 @@ public class Teto_Stage : MonoBehaviour
         for (int i = 0; i < boardHeight; ++i)
         {
             var col = new GameObject((boardHeight - i - 1).ToString());
-            col.transform.position = new Vector3(0, halfHeight - i, 0);
+            col.transform.position = boardOrigin.position + new Vector3(0, halfHeight - i, 0);
             col.transform.parent = boardNode;
         }
 
@@ -98,7 +103,7 @@ public class Teto_Stage : MonoBehaviour
             {
             }
         }
-        
+
         //컨티뉴
         if (gameoverPanel.activeSelf || gamedonePanel.activeSelf)
         {
@@ -126,19 +131,22 @@ public class Teto_Stage : MonoBehaviour
     {
         if (Terto == null)
         {
-
             Terto = FindFirstObjectByType<Teto_Player_Anim>();
         }
 
         if (Tetime == null)
         {
-
             Tetime = FindFirstObjectByType<Teto_Timer>();
         }
     }
+
     //active to end the game also active animation
     public void gameOver_setters()
     {
+        if (m_gameEnded)
+            return;
+        m_gameEnded = true;
+
         bool isWin = scoreVal >= targetVal;
         bool isOver = Tetime.GameTime <= 0;
         if (Terto != null)
@@ -169,8 +177,18 @@ public class Teto_Stage : MonoBehaviour
             }
         }
 
-        UI_score.SetActive(false);
+        StartCoroutine(TurnDialogueOn());
     }
+    IEnumerator TurnDialogueOn()
+    {
+        yield return new WaitForSeconds(1);
+        UI_score.SetActive(false);
+        yield return new WaitForSeconds(1);
+        dialogManager.GetComponent<DialogueController>().StartFirstDialogue();
+        gameObject.SetActive(false);
+    }
+
+
     bool moveTeto(Vector3 moveDir, bool isRotate)
     {
         Vector3 oldPos = tet_blockNode.transform.position;
@@ -212,14 +230,16 @@ public class Teto_Stage : MonoBehaviour
         while (root.childCount > 0)
         {
             var node = root.GetChild(0);
+            Vector3 localPos = node.position - boardOrigin.position;
 
-            int x = Mathf.RoundToInt(node.transform.position.x + halfWidth);
-            int y = Mathf.RoundToInt(node.transform.position.y + halfHeight - 1);
+            int x = Mathf.RoundToInt(localPos.x + halfWidth);
+            int y = Mathf.RoundToInt(localPos.y + halfHeight - 1);
 
             node.parent = boardNode.Find(y.ToString());
             node.name = x.ToString();
         }
     }
+
 
     void CheckBoardColumn()
     {
@@ -229,16 +249,16 @@ public class Teto_Stage : MonoBehaviour
 
         foreach (Transform column in boardNode)
         {
-            if(column.childCount == boardWidth)
+            if (column.childCount == boardWidth)
             {
-                foreach(Transform tile in column)
+                foreach (Transform tile in column)
                 {
                     Destroy(tile.gameObject);
                 }
 
                 column.DetachChildren();
                 isCleared = true;
-                    lineCount++;
+                lineCount++;
             }
         }
         //clear the line get the score. also active animation.
@@ -255,34 +275,34 @@ public class Teto_Stage : MonoBehaviour
         //winning target
         if (lineCount != 0)
         {
-            if (scoreVal == targetVal || scoreVal == 3000)
+            if (scoreVal == targetVal || scoreVal == 2000)
             {
-                scoreVal = 3000;
+                scoreVal = 2000;
                 Invoke("gameOver_setters", 1.0f);
             }
         }
 
         if (isCleared)
         {
-            for(int i = 1; i < boardNode.childCount; ++i)
+            for (int i = 1; i < boardNode.childCount; ++i)
             {
                 var column = boardNode.Find(i.ToString());
 
                 if (column.childCount == 0)
                     continue;
 
-            int emptyCol = 0;
+                int emptyCol = 0;
                 int j = i - 1;
 
-            while (j >= 0)
+                while (j >= 0)
                 {
-                    if(boardNode.Find(j.ToString()).childCount == 0)
+                    if (boardNode.Find(j.ToString()).childCount == 0)
                     {
                         emptyCol++;
                     }
                     j--;
                 }
-            if (emptyCol > 0)
+                if (emptyCol > 0)
                 {
                     var targetColumn = boardNode.Find((i - emptyCol).ToString());
 
@@ -317,30 +337,29 @@ public class Teto_Stage : MonoBehaviour
         for (int i = 0; i < root.childCount; ++i)
         {
             var node = root.GetChild(i);
-            int x = Mathf.RoundToInt(node.transform.position.x + halfWidth);
-            int y = Mathf.RoundToInt(node.transform.position.y + halfHeight - 1.0f);
+            Vector3 localPos = node.position - boardOrigin.position;
 
-            if (x < 0 || x > boardWidth - 1)
-                return false;
+            int x = Mathf.RoundToInt(localPos.x + halfWidth);
+            int y = Mathf.RoundToInt(localPos.y + halfHeight - 1.0f);
 
-            if (y < 0)
+            if (x < 0 || x >= boardWidth || y < 0)
                 return false;
 
             var column = boardNode.Find(y.ToString());
-
-            if(column  != null && column.Find(x.ToString()) != null)
+            if (column != null && column.Find(x.ToString()) != null)
                 return false;
         }
 
         return true;
     }
 
+
     //Creates Tile code
-    Tile CreateTile(Transform parent, Vector2 position, Color color, int order = 1)
+    Tile CreateTile(Transform parent, Vector2 localPosition, Color color, int order = 1)
     {
         var go = Instantiate(tilePrefab);
-        go.transform.parent = parent;
-        go.transform.localPosition = position * 1.0f;
+        go.transform.SetParent(parent, false);
+        go.transform.localPosition = localPosition;
 
         var tile = go.GetComponent<Tile>();
         tile.color = color;
@@ -349,50 +368,46 @@ public class Teto_Stage : MonoBehaviour
         return tile;
     }
 
+
     //Creates BG
     void CreateBackground()
     {
         Color color = Color.gray;
 
-        //board
         color.a = 0.6f;
         for (int x = -halfWidth; x < halfWidth; x++)
         {
-            for(int y = halfHeight; y > -halfHeight; --y)
+            for (int y = halfHeight; y > -halfHeight; --y)
             {
                 CreateTile(backgroundNode, new Vector2(x, y), color, 0);
             }
         }
 
-        //lines Left and Right
         color.a = 1.0f;
         for (int y = halfHeight; y > -halfHeight; --y)
         {
             CreateTile(backgroundNode, new Vector2(-halfWidth - 1, y), color, 0);
             CreateTile(backgroundNode, new Vector2(halfWidth, y), color, 0);
         }
-        
-        //under line
-        for(int x = -halfWidth - 1; x <= halfWidth; ++x)
+
+        for (int x = -halfWidth - 1; x <= halfWidth; ++x)
         {
             CreateTile(backgroundNode, new Vector2(x, -halfHeight), color, 0);
         }
+
+        backgroundNode.position = boardOrigin.position;
     }
+
+
 
     //creates tet_block
     void CreateBlock()
     {
-        int index;
+        int index = (indexVal == -1) ? Random.Range(0, 7) : indexVal;
         Color32 color = Color.white;
 
-        if (indexVal == -1)
-        {
-            index = Random.Range(0, 7);
-        }
-        else index = indexVal;
-
         tet_blockNode.rotation = Quaternion.identity;
-        tet_blockNode.position = new Vector2(0, halfHeight - 1);
+        tet_blockNode.position = boardOrigin.position + new Vector3(0, halfHeight - 1, 0);
 
         switch (index)
         {
@@ -459,7 +474,7 @@ public class Teto_Stage : MonoBehaviour
                 CreateTile(tet_blockNode, new Vector2(0f, 0f), color);
                 CreateTile(tet_blockNode, new Vector2(1f, 0f), color);
                 CreateTile(tet_blockNode, new Vector2(0f, 1f), color);
-                
+
                 break;
 
             //Z 모양
@@ -470,7 +485,7 @@ public class Teto_Stage : MonoBehaviour
                 CreateTile(tet_blockNode, new Vector2(0f, 1f), color);
                 CreateTile(tet_blockNode, new Vector2(0f, 0f), color);
                 CreateTile(tet_blockNode, new Vector2(1f, 0f), color);
-                
+
                 break;
         }
         CreatePre();
@@ -479,19 +494,18 @@ public class Teto_Stage : MonoBehaviour
 
     void CreatePre()
     {
-        foreach(Transform tile in previewNode)
+        foreach (Transform tile in previewNode)
         {
             Destroy(tile.gameObject);
         }
         previewNode.DetachChildren();
 
         indexVal = Random.Range(0, 7);
-
         Color32 color = Color.white;
 
-        previewNode.position = new Vector2(halfWidth + 6.2f, halfHeight - 5);
+        previewNode.position = boardOrigin.position + new Vector3(halfWidth + 6.2f, halfHeight - 5, 0);
 
-        switch(indexVal)
+        switch (indexVal)
         {
             //I 모양
             case 0:

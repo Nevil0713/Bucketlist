@@ -1,0 +1,39 @@
+{
+    "sceneName" : "Intro",
+    "dialogues" :
+    [
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "버킷리스트의 첫 번째 내용을 끝냈다.",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream1",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : " ",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : null,
+            "characterSprite" : null,
+            "textbox" : null,
+            "namebox" : null,
+            "text" : null,
+            "background" : "BlackScreen",
+            "choices" :
+            [
+                {
+                    "text" : "눈을 뜬다.",
+                    "nextScene" : null
+                }
+            ]
+        }
+    ]
+}

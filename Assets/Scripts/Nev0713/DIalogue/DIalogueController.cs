@@ -24,10 +24,12 @@ public class DialogueController : MonoBehaviour
     {
         dialogueView.HideAllUI();
         inputHandler.OnClick += OnScreenClicked;
-        ScreenFader.FadeOut(() =>
-        {
-            StartDialogue("Dialogues/" + dialogueName);
-        });
+    }
+
+    public void StartFirstDialogue()
+    {
+        StartDialogue("Dialogues/" + dialogueName);
+        
     }
 
     public void StartDialogue(string pFileName)

@@ -11,6 +11,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 8f7e1e91298dbc845bda06a39aa19cd2
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Fishing.unity
+    guid: 0a5a38207013a9646a55b2d327bbb839
+  - enabled: 1
+    path: Assets/Scenes/Minigames/FlipAndMatch.unity
+    guid: c38004d0bf995d04aa8378d44cdb6e3e
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Puzzle.unity
+    guid: b9421706cf80e5e4ba9042effa6b3fa0
+  - enabled: 1
+    path: Assets/Scenes/Minigames/SequenceMemory.unity
+    guid: bbe9fdc29b9ece94f81eb0c4487f612d
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Tetris.unity
+    guid: b31f8f7dc957ced448a23cad652b9ba1
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -1262,7 +1262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueName: Intro
-  nextSceneName: 
+  nextSceneName: Fishing
   dialogueView: {fileID: 2011612940}
   inputHandler: {fileID: 1800458828}
 --- !u!1 &1811597039
