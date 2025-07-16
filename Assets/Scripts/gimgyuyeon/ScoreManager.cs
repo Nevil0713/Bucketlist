@@ -4,6 +4,7 @@ using TMPro; // TextMeshPro 사용을 위해 추가
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
+    public GameManager gameManager;
 
     public TextMeshProUGUI scoreText; // ← Text가 아닌 TextMeshProUGUI
     private int score = 0;
@@ -24,5 +25,10 @@ public class ScoreManager : MonoBehaviour
     {
         score += amount;
         scoreText.text = score.ToString();
+
+        if(score >= 10 && !gameManager.gameCleared)
+        {
+            gameManager.gameCleared = true;
+        }
     }
 }

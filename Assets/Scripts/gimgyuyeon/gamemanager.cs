@@ -4,6 +4,7 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
+    public DialogueController dialogueController;
     public GameObject molePrefab;
     public Transform[] spawnPoints;
     public float spawnInterval = 1.5f;
@@ -50,6 +51,10 @@ public class GameManager : MonoBehaviour
         CancelInvoke(nameof(SpawnMole));
         Debug.Log("게임 종료!");
 
-        if()
+        if(gameCleared)
+        {
+            gameObject.SetActive(false);
+            dialogueController.StartFirstDialogue();
+        }
     }
 }
