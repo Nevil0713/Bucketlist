@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
+
 public class DialogueController : MonoBehaviour
 {
     [SerializeField] private DialogueView dialogueView;
@@ -50,14 +51,17 @@ public class DialogueController : MonoBehaviour
 
         string backgroundPath = string.IsNullOrEmpty(line.background) ? null : "Backgrounds/" + line.background;
         string characterPath = string.IsNullOrEmpty(line.characterSprite) ? null : "Characters/" + line.character + "/" + line.characterSprite;
+        string textboxPath = string.IsNullOrEmpty(line.textbox) ? null : "UI/Textbox/Textbox_" + line.textbox;
+        string nameboxPath = string.IsNullOrEmpty(line.namebox) ? null : "UI/Namebox/Namebox_" + line.namebox;
 
         bool isBackgroundChanged = backgroundPath != m_previousBackground;
 
         void ShowUI()
         {
-            dialogueView.SetCharacterName(line.characterName);
             dialogueView.SetBackground(LoadSprite(backgroundPath));
             dialogueView.SetCharacterSprite(LoadSprite(characterPath));
+            dialogueView.SetDialogueTextbox(LoadSprite(textboxPath));
+            dialogueView.SetCharacterNamebox(LoadSprite(nameboxPath));
         }
 
         if (isBackgroundChanged)
@@ -65,19 +69,11 @@ public class DialogueController : MonoBehaviour
             ScreenFader.FadeIn(() =>
             {
                 ShowUI();
-
-                dialogueView.HideUIForTransition();
-
+                dialogueView.HideUI();
                 ScreenFader.FadeOut(() =>
                 {
                     dialogueView.ShowUI();
-
-                    if (m_typingCoroutine != null) StopCoroutine(m_typingCoroutine);
-                    m_typingCoroutine = StartCoroutine(TypeSentence(line.text, () =>
-                    {
-                        if (line.choices != null && line.choices.Count > 0)
-                            dialogueView.ShowChoices(line.choices, OnChoiceSelected);
-                    }));
+                    PlayTyping(line);
                 });
             });
         }
@@ -85,38 +81,47 @@ public class DialogueController : MonoBehaviour
         {
             ShowUI();
             dialogueView.ShowUI();
-
-            if (m_typingCoroutine != null) StopCoroutine(m_typingCoroutine);
-            m_typingCoroutine = StartCoroutine(TypeSentence(line.text, () =>
-            {
-                if (line.choices != null && line.choices.Count > 0)
-                    dialogueView.ShowChoices(line.choices, OnChoiceSelected);
-            }));
+            PlayTyping(line);
         }
 
         m_previousBackground = backgroundPath;
     }
 
-
-    private IEnumerator TypeSentence(string pSentence, System.Action pOnComplete)
-{
-    m_isTyping = true;
-    dialogueView.SetDialogueText("");
-
-    foreach (char letter in pSentence)
+    private void PlayTyping(DialogueLine line)
     {
-        dialogueView.AppendDialogueLetter(letter);
-        yield return new WaitForSeconds(m_textSpeed);
+        if (m_typingCoroutine != null) StopCoroutine(m_typingCoroutine);
+        m_typingCoroutine = StartCoroutine(TypeSentence(line.text, () =>
+        {
+            if (line.choices != null && line.choices.Count > 0)
+                StartCoroutine(ShowChoicesWithDelay(line));
+        }));
     }
 
-    m_isTyping = false;
-    yield return new WaitForSeconds(1f);
-    pOnComplete?.Invoke();
-}
+    private IEnumerator TypeSentence(string pSentence, System.Action pOnComplete)
+    {
+        m_isTyping = true;
+        dialogueView.SetDialogueText("");
+
+        foreach (char letter in pSentence)
+        {
+            dialogueView.AppendDialogueLetter(letter);
+            yield return new WaitForSeconds(m_textSpeed);
+        }
+
+        m_isTyping = false;
+        pOnComplete?.Invoke();
+    }
+
+    private IEnumerator ShowChoicesWithDelay(DialogueLine line)
+    {
+        yield return new WaitForSeconds(1f);
+        dialogueView.ShowChoices(line.choices, OnChoiceSelected);
+    }
 
     private void OnScreenClicked()
     {
-        if (ScreenFader.IsFading || m_currentScene == null) return;
+        if (ScreenFader.IsFading || m_currentScene == null)
+            return;
 
         DialogueLine line = m_currentScene.dialogues[m_dialogueIndex];
 
@@ -164,7 +169,9 @@ public class DialogueController : MonoBehaviour
 
     private Sprite LoadSprite(string pPath)
     {
-        if (string.IsNullOrEmpty(pPath)) return null;
+        if (string.IsNullOrEmpty(pPath))
+            return null;
+        
         return Resources.Load<Sprite>(pPath);
     }
 }

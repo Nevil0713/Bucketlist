@@ -4,39 +4,54 @@
     [
         {
             "character" : "",
-            "characterName" : "",
             "characterSprite" : "",
-            "text" : "작년 겨울, 나는 시한부 진단을 받았다.",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "작년 겨울, 소녀는 시한부 진단을 받았다.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Hospital1",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "덤덤하게 받아들일 수 있을 줄 알았는데",
+            "background" : "Hospital",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Hospital2",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "막상 의사 선생님의 말을 들으니 숨이 턱 막히는 것 같았지.",
+            "background" : "Hospital",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "시간은 빠르게 흘러갔고, 8개월이 지나",
             "background" : "BlackScreen",
             "choices" : null
         },
         {
             "character" : "",
-            "characterName" : "",
             "characterSprite" : "",
-            "text" : "병원 생활을 하며 죽음을 기다리고 있었기에, 때가 되면 덤덤하게 받아들일 수 있을 줄 알았으나",
-            "background" : "BlackScreen",
-            "choices" : null
-        },
-        {
-            "character" : "",
-            "characterName" : "",
-            "characterSprite" : "",
-            "text" : "막상 의사 선생님의 말을 들으니 숨이 턱 막히는 것 같았다.",
-            "background" : "BlackScreen",
-            "choices" : null
-        },
-        {
-            "character" : "",
-            "characterName" : "",
-            "characterSprite" : "",
-            "text" : "그렇게 8개월이라는 시간이 흘렀고, 여름이 찾아왔다.",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "여름이 찾아왔다.",
             "background" : "BlackScreen",
             "choices" : null
         },
         {
             "character" : null,
             "characterSprite" : null,
+            "textbox" : null,
+            "namebox" : null,
             "text" : null,
             "background" : "BlackScreen",
             "choices" :
@@ -49,31 +64,36 @@
         },
         {
             "character" : "Soyeong",
-            "characterName" : "소영",
             "characterSprite" : "Hospital2",
-            "text" : "\"...\"",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "...",
             "background" : "Hospital",
             "choices" : null
         },
         {
             "character" : "Soyeong",
-            "characterName" : "",
             "characterSprite" : "Hospital1",
+            "textbox" : "Narration",
+            "namebox" : "",
             "text" : "또 하루, 지루한 날이 지나가고 있었고",
             "background" : "Hospital",
             "choices" : null
         },
         {
             "character" : "Soyeong",
-            "characterName" : "소영",
-            "characterSprite" : "Hospital1",
-            "text" : "\"나는 오늘도 핸드폰이나 만지작거리다 잠들겠지.\"",
+            "characterSprite" : "Hospital2",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "나는 오늘도 핸드폰이나 만지작거리다 잠들겠지.",
             "background" : "Hospital",
             "choices" : null
         },
         {
-            "character" : null,
-            "characterSprite" : null,
+            "character" : "Soyeong",
+            "characterSprite" : "Hospital1",
+            "textbox" : null,
+            "namebox" : null,
             "text" : null,
             "background" : "Hospital",
             "choices" :
@@ -86,33 +106,210 @@
         },
         {
             "character" : "",
-            "characterName" : "",
             "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
             "text" : "...소녀는 알지 못했다.",
             "background" : "BlackScreen",
             "choices" : null
         },
         {
             "character" : "",
-            "characterName" : "",
             "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
             "text" : "다음날 자신이 세상을 떠난다는 것을.",
             "background" : "BlackScreen",
             "choices" : null
         },
         {
             "character" : "",
-            "characterName" : "",
             "characterSprite" : "",
-            "text" : "오늘 밤이 잠에 들 수 있는 마지막 날임을.",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "오늘 밤이 잠에 들 수 있는 마지막 날이라는 것을.",
             "background" : "BlackScreen",
             "choices" : null
         },
         {
             "character" : "",
-            "characterName" : "",
             "characterSprite" : "",
-            "text" : "대사 선택지",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "...",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "소녀는 잠들었고, 두 요정이 조심스럽게 움직인다.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Haru",
+            "characterSprite" : "Stand2",
+            "textbox" : "Haru",
+            "namebox" : "Haru",
+            "text" : "오늘이야.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Haru",
+            "characterSprite" : "Stand1",
+            "textbox" : "Haru",
+            "namebox" : "Haru",
+            "text" : "소영이의 마지막 밤.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Milae",
+            "characterSprite" : "Stand1",
+            "textbox" : "Milae",
+            "namebox" : "Milae",
+            "text" : "... 그래.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Haru",
+            "characterSprite" : "Stand1",
+            "textbox" : "Haru",
+            "namebox" : "Haru",
+            "text" : "그동안 좋은 꿈을 꾸게 해준다고 많이 노력했지만...",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Haru",
+            "characterSprite" : "Stand1",
+            "textbox" : "Haru",
+            "namebox" : "Haru",
+            "text" : "악몽의 힘이 너무 강해서 우리의 힘을 쓸 수 없었지.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Milae",
+            "characterSprite" : "Stand2",
+            "textbox" : "Milae",
+            "namebox" : "Milae",
+            "text" : "소영이가 오늘도 악몽을 꿀까?",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Haru",
+            "characterSprite" : "Stand1",
+            "textbox" : "Haru",
+            "namebox" : "Haru",
+            "text" : "안돼.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Haru",
+            "characterSprite" : "Stand1",
+            "textbox" : "Haru",
+            "namebox" : "Haru",
+            "text" : "오늘만큼은 절대로 안돼.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Haru",
+            "characterSprite" : "Stand1",
+            "textbox" : "Haru",
+            "namebox" : "Haru",
+            "text" : "무슨 수를 써서라도 오늘은 가장 행복한 꿈을 꾸게 해주고 싶어.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Milae",
+            "characterSprite" : "Stand1",
+            "textbox" : "Milae",
+            "namebox" : "Milae",
+            "text" : "어떻게?",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Haru",
+            "characterSprite" : "Stand1",
+            "textbox" : "Haru",
+            "namebox" : "Haru",
+            "text" : "우리는 '꿈의 요정'이잖아.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Haru",
+            "characterSprite" : "Stand1",
+            "textbox" : "Haru",
+            "namebox" : "Haru",
+            "text" : "소영이의 꿈에 직접 들어가서 친구가 되어주는거야.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Haru",
+            "characterSprite" : "Stand2",
+            "textbox" : "Haru",
+            "namebox" : "Haru",
+            "text" : "그리고...",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Haru",
+            "characterSprite" : "Stand1",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "분홍색 요정은 침대 서랍에서 종이 하나를 꺼냈다.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Milae",
+            "characterSprite" : "Stand1",
+            "textbox" : "Milae",
+            "namebox" : "Milae",
+            "text" : "그건...",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Milae",
+            "characterSprite" : "Stand1",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "종이에는 [병원에서 나가면 꼭 해볼 버킷리스트]라고 쓰여있었다.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Milae",
+            "characterSprite" : "Stand1",
+            "textbox" : "Milae",
+            "namebox" : "Milae",
+            "text" : "소영이의 버킷리스트잖아.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+
+
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "선택한다.",
             "background" : "Beach",
             "choices" :
             [

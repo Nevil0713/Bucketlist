@@ -8,12 +8,23 @@ public class DialogueView : MonoBehaviour
     [SerializeField] private GameObject dialogueUIContainer;
     [SerializeField] private Image backgroundImage;
     [SerializeField] private Image characterImage;
-    [SerializeField] private Text characterNameText;
+    [SerializeField] private Image dialogueTextbox;
+    [SerializeField] private Image characterNamebox;
     [SerializeField] private Text dialogueText;
     [SerializeField] private GameObject choicePanel;
     [SerializeField] private Button choiceButtonPrefab;
 
     private Action<string> m_onChoiceSelected;
+
+    public void ShowUI()
+    {
+        dialogueUIContainer.SetActive(true);
+    }
+
+    public void HideUI()
+    {
+        dialogueUIContainer.SetActive(false);
+    }
 
     public void HideAllUI()
     {
@@ -21,19 +32,30 @@ public class DialogueView : MonoBehaviour
         choicePanel.SetActive(false);
     }
 
-    public void ShowUI()
+    public void SetDialogueTextbox(Sprite pSprite)
     {
-        dialogueUIContainer.SetActive(true);
+        if (pSprite != null)
+        {
+            dialogueTextbox.sprite = pSprite;
+            dialogueTextbox.gameObject.SetActive(true);
+        }
+        else
+        {
+            dialogueTextbox.gameObject.SetActive(false);
+        }
     }
 
-    public void HideUIForTransition()
+    public void SetCharacterNamebox(Sprite pSprite)
     {
-        dialogueUIContainer.SetActive(false);
-    }
-
-    public void SetCharacterName(string pName)
-    {
-        characterNameText.text = pName ?? "";
+        if (pSprite != null)
+        {
+            characterNamebox.sprite = pSprite;
+            characterNamebox.gameObject.SetActive(true);
+        }
+        else
+        {
+            characterNamebox.gameObject.SetActive(false);
+        }
     }
 
     public void SetDialogueText(string pText)
@@ -59,22 +81,13 @@ public class DialogueView : MonoBehaviour
             characterImage.sprite = pSprite;
             characterImage.gameObject.SetActive(true);
 
-            // 원본 크기 구하기
-            float originalWidth = pSprite.bounds.size.x;
-            float originalHeight = pSprite.bounds.size.y;
-            float aspectRatio = originalWidth / originalHeight;
-
-            // 기준 높이 설정
-            float targetHeight = 8;
+            float aspectRatio = pSprite.bounds.size.x / pSprite.bounds.size.y;
+            float targetHeight = 8f;
             float targetWidth = targetHeight * aspectRatio;
 
-            // RectTransform 사이즈 조정
             RectTransform rect = characterImage.GetComponent<RectTransform>();
             rect.sizeDelta = new Vector2(targetWidth, targetHeight);
-
-            // 비율 확대
-            float scaleMultiplier = 1.0f;
-            rect.localScale = Vector3.one * scaleMultiplier;
+            rect.localScale = Vector3.one;
         }
         else
         {
@@ -93,10 +106,10 @@ public class DialogueView : MonoBehaviour
         foreach (var choice in pChoices)
         {
             var localChoice = choice;
-            Button btn = Instantiate(choiceButtonPrefab, choicePanel.transform);
-            btn.GetComponentInChildren<Text>().text = localChoice.text;
+            Button button = Instantiate(choiceButtonPrefab, choicePanel.transform);
+            button.GetComponentInChildren<Text>().text = localChoice.text;
 
-            btn.onClick.AddListener(() =>
+            button.onClick.AddListener(() =>
             {
                 m_onChoiceSelected?.Invoke(localChoice.nextScene);
             });
