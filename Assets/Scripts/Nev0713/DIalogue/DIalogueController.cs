@@ -21,7 +21,10 @@ public class DialogueController : MonoBehaviour
     {
         dialogueView.HideAllUI();
         inputHandler.OnClick += OnScreenClicked;
-        StartDialogue("Dialogues/Intro");
+        ScreenFader.FadeOut(() =>
+        {
+            StartDialogue("Dialogues/Intro");
+        });
     }
 
     public void StartDialogue(string pFileName)
@@ -134,7 +137,16 @@ public class DialogueController : MonoBehaviour
     private void OnChoiceSelected(string pNextScene)
     {
         dialogueView.HideChoices();
-        StartDialogue("Dialogues/" + pNextScene);
+
+        if (string.IsNullOrEmpty(pNextScene))
+        {
+            m_dialogueIndex++;
+            ShowCurrentDialogue();
+        }
+        else
+        {
+            StartDialogue("Dialogues/" + pNextScene);
+        }
     }
 
     private void ChangeScene(string pSceneName)

@@ -8,7 +8,7 @@ public class JsonDialogueLoader : IDialogueLoader
         TextAsset json = Resources.Load<TextAsset>(pFileName);
         if (json == null)
         {
-            Debug.LogError($"JSON 파일을 찾을 수 없습니다: {pFileName}");
+            Debug.LogError($"Can't find any JSON file: {pFileName}");
             return null;
         }
 
