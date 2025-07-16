@@ -23,7 +23,7 @@ public class BubbleShooter : MonoBehaviour
         if (rb != null)
         {
             Vector2 direction = firePoint.up;
-            rb.velocity = direction * shootForce;
+            rb.linearVelocity = direction * shootForce;
         }
     }
 }

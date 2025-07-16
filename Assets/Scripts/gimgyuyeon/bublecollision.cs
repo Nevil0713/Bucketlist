@@ -11,12 +11,12 @@ public class BubbleCollision : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Ãæµ¹ ´ë»óÀÌ "Bubble" ÅÂ±×ÀÏ ¶§¸¸ °íÁ¤
+        // ï¿½æµ¹ ï¿½ï¿½ï¿½ï¿½ï¿½ "Bubble" ï¿½Â±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         if (collision.gameObject.CompareTag("Bubble"))
         {
             if (rb != null)
             {
-                rb.velocity = Vector2.zero;
+                rb.linearVelocity = Vector2.zero;
                 rb.bodyType = RigidbodyType2D.Static;
             }
         }
