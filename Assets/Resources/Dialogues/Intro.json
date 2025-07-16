@@ -6,14 +6,21 @@
             "character" : "c1",
             "characterSprite": null,
             "text" : "대사 1",
-            "background" : "Hospital",
+            "background" : "BlackScreen",
             "choices" : null
         },
         {
             "character" : "c1",
             "characterSprite": null,
             "text" : "대사 2",
-            "background" : "Beach",
+            "background" : "Hospital",
+            "choices" : null
+        },
+        {
+            "character" : "c1",
+            "characterSprite": null,
+            "text" : "대사 3",
+            "background" : "Hospital",
             "choices" : null
         },
         {

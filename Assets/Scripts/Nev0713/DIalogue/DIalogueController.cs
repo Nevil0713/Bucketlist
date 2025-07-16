@@ -3,9 +3,8 @@ using UnityEngine;
 
 public class DialogueController : MonoBehaviour
 {
-    [Header("필수 컴포넌트 연결")]
-    public DialogueView m_dialogueView;
-    public InputHandler m_inputHandler;
+    [SerializeField] private DialogueView dialogueView;
+    [SerializeField] private InputHandler inputHandler;
 
     private IDialogueLoader m_dialogueLoader = new JsonDialogueLoader();
     private SceneLoader m_sceneLoader = new SceneLoader();
@@ -14,12 +13,14 @@ public class DialogueController : MonoBehaviour
     private int m_dialogueIndex;
     private bool m_isTyping;
     private Coroutine m_typingCoroutine;
+    private string m_previousBackground;
 
     private const float m_textSpeed = 0.04f;
 
     private void Start()
     {
-        m_inputHandler.OnClick += OnScreenClicked;
+        dialogueView.HideAllUI();
+        inputHandler.OnClick += OnScreenClicked;
         StartDialogue("Dialogues/Intro");
     }
 
@@ -32,7 +33,8 @@ public class DialogueController : MonoBehaviour
 
     private void ShowCurrentDialogue()
     {
-        if (m_currentScene == null) return;
+        if (m_currentScene == null)
+            return;
 
         if (m_dialogueIndex >= m_currentScene.dialogues.Count)
         {
@@ -42,38 +44,64 @@ public class DialogueController : MonoBehaviour
 
         DialogueLine line = m_currentScene.dialogues[m_dialogueIndex];
 
-        ScreenFader.FadeIn(() =>
+        string backgroundPath = string.IsNullOrEmpty(line.background) ? null : "Backgrounds/" + line.background;
+        string characterPath = string.IsNullOrEmpty(line.characterSprite) ? null : "Characters/" + line.characterSprite;
+
+        bool isBackgroundChanged = backgroundPath != m_previousBackground;
+
+        void ShowUI()
         {
-            m_dialogueView.SetCharacterName(line.character);
-            
-            string backgroundPath = string.IsNullOrEmpty(line.background) ? null : "Backgrounds/" + line.background;
-            string characterPath = string.IsNullOrEmpty(line.characterSprite) ? null : "Characters/" + line.characterSprite;
+            dialogueView.SetCharacterName(line.character);
+            dialogueView.SetBackground(LoadSprite(backgroundPath));
+            dialogueView.SetCharacterSprite(LoadSprite(characterPath));
+        }
 
-            m_dialogueView.SetBackground(LoadSprite(backgroundPath));
-            m_dialogueView.SetCharacterSprite(LoadSprite(characterPath));
-
-            ScreenFader.FadeOut(() =>
+        if (isBackgroundChanged)
+        {
+            ScreenFader.FadeIn(() =>
             {
-                if (m_typingCoroutine != null) StopCoroutine(m_typingCoroutine);
-                m_typingCoroutine = StartCoroutine(TypeSentence(line.text, () =>
+                ShowUI();
+
+                dialogueView.HideUIForTransition();
+
+                ScreenFader.FadeOut(() =>
                 {
-                    if (line.choices != null && line.choices.Count > 0)
+                    dialogueView.ShowUI();
+
+                    if (m_typingCoroutine != null) StopCoroutine(m_typingCoroutine);
+                    m_typingCoroutine = StartCoroutine(TypeSentence(line.text, () =>
                     {
-                        m_dialogueView.ShowChoices(line.choices, OnChoiceSelected);
-                    }
-                }));
+                        if (line.choices != null && line.choices.Count > 0)
+                            dialogueView.ShowChoices(line.choices, OnChoiceSelected);
+                    }));
+                });
             });
-        });
+        }
+        else
+        {
+            ShowUI();
+            dialogueView.ShowUI();
+
+            if (m_typingCoroutine != null) StopCoroutine(m_typingCoroutine);
+            m_typingCoroutine = StartCoroutine(TypeSentence(line.text, () =>
+            {
+                if (line.choices != null && line.choices.Count > 0)
+                    dialogueView.ShowChoices(line.choices, OnChoiceSelected);
+            }));
+        }
+
+        m_previousBackground = backgroundPath;
     }
+
 
     private IEnumerator TypeSentence(string pSentence, System.Action pOnComplete)
     {
         m_isTyping = true;
-        m_dialogueView.SetDialogueText("");
+        dialogueView.SetDialogueText("");
 
         foreach (char letter in pSentence)
         {
-            m_dialogueView.SetDialogueText(m_dialogueView.dialogueText.text + letter);
+            dialogueView.AppendDialogueLetter(letter);
             yield return new WaitForSeconds(m_textSpeed);
         }
 
@@ -83,8 +111,7 @@ public class DialogueController : MonoBehaviour
 
     private void OnScreenClicked()
     {
-        if (ScreenFader.IsFading) return;
-        if (m_currentScene == null) return;
+        if (ScreenFader.IsFading || m_currentScene == null) return;
 
         DialogueLine line = m_currentScene.dialogues[m_dialogueIndex];
 
@@ -94,7 +121,7 @@ public class DialogueController : MonoBehaviour
         if (m_isTyping)
         {
             if (m_typingCoroutine != null) StopCoroutine(m_typingCoroutine);
-            m_dialogueView.SetDialogueText(line.text);
+            dialogueView.SetDialogueText(line.text);
             m_isTyping = false;
         }
         else
@@ -106,7 +133,7 @@ public class DialogueController : MonoBehaviour
 
     private void OnChoiceSelected(string pNextScene)
     {
-        m_dialogueView.HideChoices();
+        dialogueView.HideChoices();
         StartDialogue("Dialogues/" + pNextScene);
     }
 
@@ -121,14 +148,9 @@ public class DialogueController : MonoBehaviour
         });
     }
 
-    private Sprite LoadSprite(string pName)
+    private Sprite LoadSprite(string pPath)
     {
-        if (string.IsNullOrEmpty(pName)) return null;
-        Sprite sprite = Resources.Load<Sprite>(pName);
-        if (sprite == null)
-        {
-            Debug.LogWarning($"스프라이트 로드 실패: {pName}");
-        }
-        return sprite;
+        if (string.IsNullOrEmpty(pPath)) return null;
+        return Resources.Load<Sprite>(pPath);
     }
 }
