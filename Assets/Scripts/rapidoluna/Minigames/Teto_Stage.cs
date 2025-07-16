@@ -104,7 +104,7 @@ public class Teto_Stage : MonoBehaviour
         {
             if (Input.GetKeyDown("r"))
             {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene("MainScene");
             }
         }
 
@@ -260,7 +260,6 @@ public class Teto_Stage : MonoBehaviour
                 scoreVal = 3000;
                 Invoke("gameOver_setters", 1.0f);
             }
-            Target.text = "Target Score: 3000";
         }
 
         if (isCleared)
