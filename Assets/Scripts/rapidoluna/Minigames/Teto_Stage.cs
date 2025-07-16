@@ -137,9 +137,9 @@ public class Teto_Stage : MonoBehaviour
         if (Terto != null)
         {
             if (isWin)
-                Terto.OhTrigger();
+                Terto.SetYeah(true);
             else
-                Terto.SadTrigger();
+                Terto.SetSad(true);
         }
 
         gamedonePanel.SetActive(isWin);
@@ -220,8 +220,8 @@ public class Teto_Stage : MonoBehaviour
         //clear the line get the score. also active animation.
         if (lineCount != 0)
         {
-            Terto.HappyTrigger();
-            Terto.HappyStop();
+            Terto.PlayHappy();
+            Invoke("Terto.HappyNo()", 1f);
 
             scoreVal += 200;
             Score.text = "" + scoreVal;

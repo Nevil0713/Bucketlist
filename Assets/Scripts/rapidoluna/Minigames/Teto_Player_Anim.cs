@@ -4,34 +4,27 @@ public class Teto_Player_Anim : MonoBehaviour
 {
     Animator animator;
 
-    public void HappyTrigger()
+    public void PlayHappy(float duration = 0.25f)
     {
-        animator.SetTrigger("isHappy");
+        animator.SetBool("isHappy", true);
+        Invoke(nameof(StopHappy), duration);
     }
 
-    public void HappyStop()
+    void StopHappy()
     {
-        animator.SetTrigger("noHappy");
+        animator.SetBool("isHappy", false);
     }
 
-    public void SadTrigger()
+    // Sad 상태 지속
+    public void SetSad(bool value)
     {
-        animator.SetTrigger("isSad");
+        animator.SetBool("isSad", value);
     }
 
-    public void SadStop()
+    // Oh(승리) 상태 지속
+    public void SetYeah(bool value)
     {
-        animator.SetTrigger("noSad");
-    }
-
-    public void OhTrigger()
-    {
-        animator.SetTrigger("isYeah");
-    }
-
-    public void OhStop()
-    {
-        animator.SetTrigger("noYeah");
+        animator.SetBool("isYeah", value);
     }
 
     private void Awake()
@@ -39,3 +32,4 @@ public class Teto_Player_Anim : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 }
+
