@@ -3,29 +3,35 @@
     "dialogues" :
     [
         {
-            "character" : "c1",
-            "characterSprite": null,
-            "text" : "대사 1",
+            "character" : null,
+            "characterSprite" : null,
+            "text" : null,
             "background" : "BlackScreen",
-            "choices" : null
+            "choices" :
+            [
+                {
+                    "text" : "눈을 뜬다.",
+                    "nextScene" : null
+                }
+            ]
         },
         {
             "character" : "c1",
-            "characterSprite": null,
+            "characterSprite" : null,
             "text" : "대사 2",
             "background" : "Hospital",
             "choices" : null
         },
         {
             "character" : "c1",
-            "characterSprite": null,
+            "characterSprite" : null,
             "text" : "대사 3",
             "background" : "Hospital",
             "choices" : null
         },
         {
             "character" : "c1",
-            "characterSprite": null,
+            "characterSprite" : null,
             "text" : "대사 선택지",
             "background" : "Beach",
             "choices" :
