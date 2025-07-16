@@ -4,11 +4,12 @@
     "dialogues" :
     [
         {
-            "character" : "Haru",
-            "characterSprite" : "Stand2",
-            "textboxSprite" : "Haru",
-            "text" : "두 번째 선택지 대사",
-            "background" : "Hospital",
+            "character" : "Milae",
+            "characterSprite" : "Stand3",
+            "textbox" : "Milae",
+            "namebox" : "Milae",
+            "text" : "캐릭터 4 / 배경: 식당",
+            "background" : "Restaurant",
             "choices" : null
         }
     ]

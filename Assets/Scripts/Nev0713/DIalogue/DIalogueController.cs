@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class DialogueController : MonoBehaviour
 {
+    [SerializeField] private string dialogueName;
+    [SerializeField] private string nextSceneName;
     [SerializeField] private DialogueView dialogueView;
     [SerializeField] private InputHandler inputHandler;
-    [SerializeField] private string nextSceneName;
 
     private IDialogueLoader m_dialogueLoader = new JsonDialogueLoader();
     private SceneLoader m_sceneLoader = new SceneLoader();
@@ -25,7 +26,7 @@ public class DialogueController : MonoBehaviour
         inputHandler.OnClick += OnScreenClicked;
         ScreenFader.FadeOut(() =>
         {
-            StartDialogue("Dialogues/Intro");
+            StartDialogue("Dialogues/" + dialogueName);
         });
     }
 

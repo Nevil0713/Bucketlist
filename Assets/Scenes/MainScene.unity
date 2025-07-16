@@ -571,7 +571,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 2
   m_StartAxis: 0
-  m_CellSize: {x: 1700, y: 100}
+  m_CellSize: {x: 1700, y: 125}
   m_Spacing: {x: 0, y: 25}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -1261,9 +1261,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8430f0cff42d6a8459c84c348d1874c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueName: Intro
+  nextSceneName: 
   dialogueView: {fileID: 2011612940}
   inputHandler: {fileID: 1800458828}
-  nextSceneName: 
 --- !u!1 &1811597039
 GameObject:
   m_ObjectHideFlags: 0

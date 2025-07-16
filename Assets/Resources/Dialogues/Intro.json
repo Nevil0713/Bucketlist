@@ -205,7 +205,7 @@
         },
         {
             "character" : "Haru",
-            "characterSprite" : "Stand1",
+            "characterSprite" : "Stand2",
             "textbox" : "Haru",
             "namebox" : "Haru",
             "text" : "안돼.",
@@ -271,7 +271,7 @@
             "characterSprite" : "Stand1",
             "textbox" : "Narration",
             "namebox" : "",
-            "text" : "분홍색 요정은 침대 서랍에서 종이 하나를 꺼냈다.",
+            "text" : "분홍색 요정은 침대 서랍에서 종이 하나를 꺼냈고",
             "background" : "BlackScreen",
             "choices" : null
         },
