@@ -16,22 +16,25 @@
             ]
         },
         {
-            "character" : "c1",
-            "characterSprite" : null,
+            "character" : "Soyeong",
+            "characterName" : "소영",
+            "characterSprite" : "Hospital1",
             "text" : "대사 2",
             "background" : "Hospital",
             "choices" : null
         },
         {
-            "character" : "c1",
-            "characterSprite" : null,
+            "character" : "Soyeong",
+            "characterName" : "소영",
+            "characterSprite" : "Hospital2",
             "text" : "대사 3",
             "background" : "Hospital",
             "choices" : null
         },
         {
-            "character" : "c1",
-            "characterSprite" : null,
+            "character" : "Soyeong",
+            "characterName" : "소영",
+            "characterSprite" : "Dream1",
             "text" : "대사 선택지",
             "background" : "Beach",
             "choices" :

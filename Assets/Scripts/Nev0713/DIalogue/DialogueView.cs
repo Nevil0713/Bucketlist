@@ -58,6 +58,23 @@ public class DialogueView : MonoBehaviour
         {
             characterImage.sprite = pSprite;
             characterImage.gameObject.SetActive(true);
+
+            // 원본 크기 구하기
+            float originalWidth = pSprite.bounds.size.x;
+            float originalHeight = pSprite.bounds.size.y;
+            float aspectRatio = originalWidth / originalHeight;
+
+            // 기준 높이 설정
+            float targetHeight = 8;
+            float targetWidth = targetHeight * aspectRatio;
+
+            // RectTransform 사이즈 조정
+            RectTransform rect = characterImage.GetComponent<RectTransform>();
+            rect.sizeDelta = new Vector2(targetWidth, targetHeight);
+
+            // 비율 확대
+            float scaleMultiplier = 1.0f;
+            rect.localScale = Vector3.one * scaleMultiplier;
         }
         else
         {

@@ -48,13 +48,13 @@ public class DialogueController : MonoBehaviour
         DialogueLine line = m_currentScene.dialogues[m_dialogueIndex];
 
         string backgroundPath = string.IsNullOrEmpty(line.background) ? null : "Backgrounds/" + line.background;
-        string characterPath = string.IsNullOrEmpty(line.characterSprite) ? null : "Characters/" + line.characterSprite;
+        string characterPath = string.IsNullOrEmpty(line.characterSprite) ? null : "Characters/" + line.character + "/" + line.characterSprite;
 
         bool isBackgroundChanged = backgroundPath != m_previousBackground;
 
         void ShowUI()
         {
-            dialogueView.SetCharacterName(line.character);
+            dialogueView.SetCharacterName(line.characterName);
             dialogueView.SetBackground(LoadSprite(backgroundPath));
             dialogueView.SetCharacterSprite(LoadSprite(characterPath));
         }

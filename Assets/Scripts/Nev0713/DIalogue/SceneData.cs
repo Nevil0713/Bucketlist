@@ -12,6 +12,7 @@ public class Choice
 public class DialogueLine
 {
     public string character;
+    public string characterName;
     public string characterSprite;
     public string text;
     public string background;
