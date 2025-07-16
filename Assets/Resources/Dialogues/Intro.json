@@ -186,11 +186,20 @@
             "choices" : null
         },
         {
+            "character" : "Milae",
+            "characterSprite" : "Stand2",
+            "textbox" : "Milae",
+            "namebox" : "Milae",
+            "text" : "악몽이 너무 강해서 우리가 어찌할 수 없었지.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
             "character" : "Haru",
             "characterSprite" : "Stand1",
             "textbox" : "Haru",
             "namebox" : "Haru",
-            "text" : "악몽의 힘이 너무 강해서 우리의 힘을 쓸 수 없었지.",
+            "text" : "그래, 맞아.",
             "background" : "BlackScreen",
             "choices" : null
         },
@@ -199,7 +208,7 @@
             "characterSprite" : "Stand2",
             "textbox" : "Milae",
             "namebox" : "Milae",
-            "text" : "소영이가 오늘도 악몽을 꿀까?",
+            "text" : "... 소영이가 오늘도 악몽을 꿀까?",
             "background" : "BlackScreen",
             "choices" : null
         },
@@ -241,7 +250,7 @@
         },
         {
             "character" : "Haru",
-            "characterSprite" : "Stand1",
+            "characterSprite" : "Stand2",
             "textbox" : "Haru",
             "namebox" : "Haru",
             "text" : "우리는 '꿈의 요정'이잖아.",
@@ -253,7 +262,7 @@
             "characterSprite" : "Stand1",
             "textbox" : "Haru",
             "namebox" : "Haru",
-            "text" : "소영이의 꿈에 직접 들어가서 친구가 되어주는거야.",
+            "text" : "소영이의 꿈에 직접 들어가는거야.",
             "background" : "BlackScreen",
             "choices" : null
         },
@@ -302,24 +311,45 @@
             "background" : "BlackScreen",
             "choices" : null
         },
-
-
         {
-            "character" : "",
-            "characterSprite" : "",
-            "textbox" : "Narration",
-            "namebox" : "",
-            "text" : "선택한다.",
-            "background" : "Beach",
+            "character" : "Haru",
+            "characterSprite" : "Stand2",
+            "textbox" : "Haru",
+            "namebox" : "Haru",
+            "text" : "우리가 소영이의 '꿈'을 이루어주는거야.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Milae",
+            "characterSprite" : "Stand1",
+            "textbox" : "Milae",
+            "namebox" : "Milae",
+            "text" : "꿈 속 환상일지라도 소영이의 꿈을 이뤄줄 수 있다면...",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Milae",
+            "characterSprite" : "Stand2",
+            "textbox" : "Milae",
+            "namebox" : "Milae",
+            "text" : "좋아. 그럼 꿈 속으로 들어가자.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : null,
+            "characterSprite" : null,
+            "textbox" : null,
+            "namebox" : null,
+            "text" : null,
+            "background" : "BlackScreen",
             "choices" :
             [
                 {
-                    "text" : "첫 번째 선택지",
-                    "nextScene" : "TestChoice1"
-                },
-                {
-                    "text" : "두 번째 선택지",
-                    "nextScene" : "TestChoice2"
+                    "text" : "소영이의 꿈 속으로 들어간다.",
+                    "nextScene" : null
                 }
             ]
         }
