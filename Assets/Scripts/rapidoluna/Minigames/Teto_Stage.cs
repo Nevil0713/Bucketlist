@@ -44,7 +44,7 @@ public class Teto_Stage : MonoBehaviour
     public Teto_Timer Tetime;
 
     private int scoreVal = 0;
-    private int targetVal = 2000;
+    private int targetVal = 1000;
 
     private int indexVal = -1;
 
@@ -275,9 +275,9 @@ public class Teto_Stage : MonoBehaviour
         //winning target
         if (lineCount != 0)
         {
-            if (scoreVal == targetVal || scoreVal == 2000)
+            if (scoreVal == targetVal || scoreVal == 1000)
             {
-                scoreVal = 2000;
+                scoreVal = 1000;
                 Invoke("gameOver_setters", 1.0f);
             }
         }

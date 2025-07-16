@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public float gameDuration = 30f; // 게임 제한 시간 (초)
     public TextMeshProUGUI timerText; // 남은 시간을 표시할 UI
 
+    public bool gameCleared = false;
+
     private float remainingTime;
 
     void Start()
@@ -47,5 +49,7 @@ public class GameManager : MonoBehaviour
         timerText.text = "Time: 0";
         CancelInvoke(nameof(SpawnMole));
         Debug.Log("게임 종료!");
+
+        if()
     }
 }
