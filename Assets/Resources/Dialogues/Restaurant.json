@@ -1,5 +1,5 @@
 {
-    "sceneName" : "ThemePark",
+    "sceneName" : "Restaurant",
     "dialogues" :
     [
         {
@@ -7,8 +7,8 @@
             "characterSprite" : "",
             "textbox" : "Narration",
             "namebox" : "",
-            "text" : "버킷리스트의 첫 번째 내용을 끝냈다.",
-            "background" : "ThemePark",
+            "text" : "버킷리스트의 세 번째 내용을 끝냈다.",
+            "background" : "Restaurant",
             "choices" : null
         },
         {
@@ -17,7 +17,7 @@
             "textbox" : "Soyeong",
             "namebox" : "Soyeong",
             "text" : " ",
-            "background" : "ThemePark",
+            "background" : "Restaurant",
             "choices" : null
         },
         {
@@ -26,7 +26,7 @@
             "textbox" : null,
             "namebox" : null,
             "text" : null,
-            "background" : "ThemePark",
+            "background" : "Restaurant",
             "choices" :
             [
                 {

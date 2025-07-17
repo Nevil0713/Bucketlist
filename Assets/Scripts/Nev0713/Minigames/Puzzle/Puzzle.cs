@@ -1,17 +1,28 @@
+using UnityEditor.Callbacks;
 using UnityEngine;
 
 
 public class Puzzle : MonoBehaviour
 {
-    [SerializeField] private PuzzleObject[] puzzles;
-    [SerializeField] private Transform[] puzzlePositions;
+    [SerializeField] private GameObject puzzle;
+    [SerializeField] private GameObject puzzlePosition;
 
+    private PuzzleObject[] puzzlePieces;
+    private Transform[] puzzlePositions;
     private bool[] m_correctPuzzles;
     private bool m_isCleared;
 
     private void Awake()
     {
-        m_correctPuzzles = new bool[puzzles.Length];
+        puzzlePieces = puzzle.GetComponentsInChildren<PuzzleObject>();
+        puzzlePositions = puzzlePosition.GetComponentsInChildren<Transform>();
+        
+        for(int i = 1; i < puzzlePositions.Length; i++)
+        {
+            puzzlePositions[i - 1] = puzzlePositions[i];
+        }
+
+        m_correctPuzzles = new bool[puzzlePieces.Length];
         m_isCleared = false;
 
         for (int i  = 0; i < m_correctPuzzles.Length; i++)
@@ -24,12 +35,13 @@ public class Puzzle : MonoBehaviour
     {
         if(Input.GetMouseButtonUp(0))
         {
-            for(int i = 0; i < puzzles.Length; i++)
+            for(int i = 0; i < puzzlePieces.Length; i++)
             {
-                float distance = Vector3.Distance(puzzles[i].transform.position, puzzlePositions[i].position);
+                float distance = Vector3.Distance(puzzlePieces[i].transform.position, puzzlePositions[i].position);
                 if (distance <= 0.25f)
                 {
-                    puzzles[i].transform.position = puzzlePositions[i].transform.position;
+                    puzzlePieces[i].transform.position = puzzlePositions[i].transform.position;
+                    puzzlePieces[i].GetComponent<BoxCollider2D>().enabled = false;
                     m_correctPuzzles[i] = true;
                 }
                 else
@@ -46,7 +58,7 @@ public class Puzzle : MonoBehaviour
             else
                 break;
 
-            if(count == puzzles.Length)
+            if(count == puzzlePieces.Length)
                 m_isCleared = true;
         }
     }

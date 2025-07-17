@@ -1,5 +1,5 @@
 {
-    "sceneName" : "Intro",
+    "sceneName" : "Beach",
     "dialogues" :
     [
         {
@@ -7,7 +7,7 @@
             "characterSprite" : "",
             "textbox" : "Narration",
             "namebox" : "",
-            "text" : "버킷리스트의 두 번째 내용을 끝냈다.",
+            "text" : "버킷리스트의 네 번째 내용을 끝냈다.",
             "background" : "Beach",
             "choices" : null
         },

@@ -2669,7 +2669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueName: Beach
-  nextSceneName: 
+  nextSceneName: Puzzle
   dialogueView: {fileID: 430542692}
   inputHandler: {fileID: 1679787250}
   startDialogueWhenStart: 0

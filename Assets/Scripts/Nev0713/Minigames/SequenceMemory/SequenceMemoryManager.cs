@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class SequenceMemoryManager : MonoBehaviour
 {
+    [SerializeField] private DialogueController dialogueManager;
+    [SerializeField] private Text roundText;
     private SequenceMemoryObject[] m_buttons;
     private List<int> m_sequence;
     private int m_targetRound;
@@ -15,16 +17,24 @@ public class SequenceMemoryManager : MonoBehaviour
 
     private void Awake()
     {
-        Init();
+        m_buttons = GetComponentsInChildren<SequenceMemoryObject>();
+        for (int i = 0; i < m_buttons.Length; i++)
+        {
+            m_buttons[i].gameObject.SetActive(false);
+        }
+        roundText.gameObject.SetActive(false);
+        ScreenFader.FadeOut();
+        Invoke("Init", 1);
     }
 
     private void Init()
     {
-        m_buttons = GetComponentsInChildren<SequenceMemoryObject>();
         for (int i = 0; i < m_buttons.Length; i++)
         {
+            m_buttons[i].gameObject.SetActive(true);
             m_buttons[i].SetButtonNumber(i);
         }
+        roundText.gameObject.SetActive(true);
 
         m_targetRound = 5;
         m_currentRound = 1;
@@ -36,6 +46,8 @@ public class SequenceMemoryManager : MonoBehaviour
 
     public IEnumerator StartRound()
     {
+        roundText.text = m_currentRound.ToString();
+
         for (int i = 0; i < m_buttons.Length; i++)
         {
             SetButton(i, false, Color.white);
@@ -138,7 +150,7 @@ public class SequenceMemoryManager : MonoBehaviour
                 SetButton(i, false, Color.red);
             }
 
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.5f);
 
             for (int i = 0; i < m_buttons.Length; i++)
             {
@@ -168,6 +180,8 @@ public class SequenceMemoryManager : MonoBehaviour
     private void GameClear()
     {
         Debug.Log("Clear");
-        // 다음 스토리 진행
+        dialogueManager.StartFirstDialogue();
+        roundText.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 }

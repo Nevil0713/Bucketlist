@@ -40,7 +40,8 @@ public class Teto_Stage : MonoBehaviour
 
     private float nextFallTime;
 
-    public Teto_Player_Anim Terto;
+    //public Teto_Player_Anim Terto;
+    public PlayerFaceController playerFace;
     public Teto_Timer Tetime;
 
     private int scoreVal = 0;
@@ -48,9 +49,16 @@ public class Teto_Stage : MonoBehaviour
 
     private int indexVal = -1;
 
+    private bool m_gameStarted = false;
     private bool m_gameEnded = false;
 
     private void Start()
+    {
+        ScreenFader.FadeOut();
+        Invoke("StartStage", 1);
+    }
+
+    void StartStage()
     {
         Gauge.fillAmount = 0.1f;
         gameoverPanel.SetActive(false);
@@ -71,10 +79,14 @@ public class Teto_Stage : MonoBehaviour
         }
 
         CreateBlock();
+        m_gameStarted = true;
     }
 
     void Update()
     {
+        if (!m_gameStarted)
+            return;
+
         Vector3 moveDir = Vector3.zero;
         bool isRotate = false;
 
@@ -129,10 +141,10 @@ public class Teto_Stage : MonoBehaviour
 
     private void Awake()
     {
-        if (Terto == null)
-        {
-            Terto = FindFirstObjectByType<Teto_Player_Anim>();
-        }
+        //if (Terto == null)
+        //{
+        //    Terto = FindFirstObjectByType<Teto_Player_Anim>();
+        //}
 
         if (Tetime == null)
         {
@@ -149,32 +161,29 @@ public class Teto_Stage : MonoBehaviour
 
         bool isWin = scoreVal >= targetVal;
         bool isOver = Tetime.GameTime <= 0;
-        if (Terto != null)
+        
+        if (isOver)
         {
-            if (isOver)
-            {
-                Terto.SetShock(true);
-                Terto.SetSad(false);
-                gameoverPanel.SetActive(true);
-                gamedonePanel.SetActive(false);
-            }
-            else if (isWin)
-            {
-                Terto.SetYeah(true);
-                gameoverPanel.SetActive(false);
-                gamedonePanel.SetActive(true);
-            }
-            else if (!isWin)
-            {
-                Terto.SetSad(true);
-                gameoverPanel.SetActive(true);
-                gamedonePanel.SetActive(false);
-            }
-            else
-            {
-                gameoverPanel.SetActive(false);
-                gamedonePanel.SetActive(false);
-            }
+            playerFace.SetPlayerFace(4);
+            gameoverPanel.SetActive(true);
+            gamedonePanel.SetActive(false);
+        }
+        else if (isWin)
+        {
+            playerFace.SetPlayerFace(2);
+            gameoverPanel.SetActive(false);
+            gamedonePanel.SetActive(true);
+        }
+        else if (!isWin)
+        {
+            playerFace.SetPlayerFace(3);
+            gameoverPanel.SetActive(true);
+            gamedonePanel.SetActive(false);
+        }
+        else
+        {
+            gameoverPanel.SetActive(false);
+            gamedonePanel.SetActive(false);
         }
 
         StartCoroutine(TurnDialogueOn());
@@ -264,8 +273,13 @@ public class Teto_Stage : MonoBehaviour
         //clear the line get the score. also active animation.
         if (lineCount != 0)
         {
-            Terto.PlayHappy();
-            Invoke(nameof(StopHappyWrapper), 1.0f);
+            playerFace.SetPlayerFace(1);
+            IEnumerator ResetPlayerFace()
+            {
+                yield return new WaitForSeconds(1);
+                playerFace.SetPlayerFace(0);
+            }
+            StartCoroutine(ResetPlayerFace());
 
             scoreVal += 200;
             Score.text = "" + scoreVal;
@@ -320,8 +334,8 @@ public class Teto_Stage : MonoBehaviour
 
     void StopHappyWrapper()
     {
-        if (Terto != null)
-            Terto.StopHappy();
+        //if (Terto != null)
+        //    Terto.StopHappy();
     }
 
     //score gauge bar

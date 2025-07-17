@@ -3,13 +3,15 @@ using UnityEngine;
 
 public class PuzzleManager : MonoBehaviour
 {
+    [SerializeField] private DialogueController dialogueManager;
     [SerializeField] private GameObject[] puzzles;
     private Puzzle m_puzzle;
     private int m_puzzleNumber = 0;
 
     private void Awake()
     {
-        Init();
+        ScreenFader.FadeOut();
+        Invoke("Init", 1);
     }
 
     private void Update()
@@ -51,6 +53,6 @@ public class PuzzleManager : MonoBehaviour
     private void GameClear()
     {
         Debug.Log("Clear");
-        // 다음 스토리 진행
+        dialogueManager.StartFirstDialogue();
     }
 }
