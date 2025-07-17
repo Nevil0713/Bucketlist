@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ThemePark_Game_0: 3247318336107690504
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

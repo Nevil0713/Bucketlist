@@ -1,50 +1,61 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    AudioSource bgm_player;
-    AudioSource sfx_player;
+    public static SoundManager instance;
 
-    public AudioClip[] audio_clips;
-    public SoundManager instance;
+    [Header("BGM")]
+    public AudioClip BGMclip;
+    public float BGMVol;
+    public AudioSource BGMsource;
 
-    void Awake()
+    [Header("SFX")]
+    public AudioClip SFXclip;
+    public float SFXVol;
+    public int channel;
+    public AudioSource[] SFXsource;
+    private int chIndex;
+
+    private void Awake()
     {
         instance = this;
-
-        bgm_player = GameObject.Find("BGM_M").GetComponent<AudioSource>();
-        sfx_player = GameObject.Find("SFX_M").GetComponent<AudioSource>();
+        SoundReset();
     }
 
-    public void PlaySound(string type)
+    void SoundReset()
     {
-        int index = 0;
+        //BGM reset
+        GameObject bgmObject = new GameObject("BGMsource");
+        bgmObject.transform.parent = transform;
+        BGMsource = bgmObject.GetComponent<AudioSource>();
+        BGMsource.playOnAwake = false;
+        BGMsource.loop = true;
+        BGMsource.volume = BGMVol;
+        BGMsource.clip = BGMclip;
 
-        switch (type)
+        //SFX reset
+        GameObject sfxObject = new GameObject("SFXsource");
+        sfxObject.transform.parent = transform;
+        SFXsource = new AudioSource[channel];
+
+        for (int i = 0; i < SFXsource.Length; i++)
         {
-            case "Clique": index = 0; break;
-            case "TestSFX": index = 1; break;
+            SFXsource[i] = sfxObject.AddComponent<AudioSource>();
+            SFXsource[i].playOnAwake = false;
+            SFXsource[i].volume = SFXVol;
         }
-
-        sfx_player.clip = audio_clips[index];
-        sfx_player.Play();
     }
 
-    public void PlayMusic(string type)
+    public void PlayBGM(bool isPlay)
     {
-        int index = 0;
-
-        switch (type)
+        if (isPlay)
         {
-            case "TestBGM": index = 0; break;
+            BGMsource.Play();
         }
-
-        bgm_player.clip = audio_clips[index];
-        bgm_player.Play();
-    }
-
-    public void Start()
-    {
-        PlayMusic("TestBGM");
+        else
+        {
+            BGMsource.Stop();
+        }
     }
 }
