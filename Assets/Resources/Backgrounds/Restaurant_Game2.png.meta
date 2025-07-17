@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Restaurant_Game2_0: -6102112935251647501
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

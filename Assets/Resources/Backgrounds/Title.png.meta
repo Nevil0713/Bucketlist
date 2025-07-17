@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: bbc298d3926ec6f4bab47db4d525bb22
+guid: f39dc5d41265e7f4a9c1d2d0d931f169
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1005970918935011362
-    second: TetrisBackground_0
-  - first:
-      213: -1446171236940910673
-    second: TetrisBackground_1
+      213: -7352339073622421304
+    second: Title_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TetrisBackground_0
+      name: Title_0
       rect:
         serializedVersion: 2
-        x: 56
-        y: 318
-        width: 32
-        height: 33
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 220ae7d883de5fd00800000000000000
-      internalID: 1005970918935011362
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TetrisBackground_1
-      rect:
-        serializedVersion: 2
-        x: 963
-        y: 33
-        width: 745
-        height: 1374
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fafefb11cea2eebe0800000000000000
-      internalID: -1446171236940910673
+      spriteID: 8c0d280219e37f990800000000000000
+      internalID: -7352339073622421304
       vertices: []
       indices: 
       edges: []
@@ -159,9 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      TetrisBackground_0: 1005970918935011362
-      TetrisBackground_1: -1446171236940910673
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,13 +1,25 @@
 fileFormatVersion: 2
-guid: bbc298d3926ec6f4bab47db4d525bb22
+guid: 69d8195a7578c4b49805b7e2a2de0bee
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1005970918935011362
-    second: TetrisBackground_0
+      213: 6492057496039767537
+    second: Title_Start_0
   - first:
-      213: -1446171236940910673
-    second: TetrisBackground_1
+      213: 2363014574632253430
+    second: Title_Start_1
+  - first:
+      213: 8597520329744895541
+    second: Title_Start_2
+  - first:
+      213: -6305134799634716161
+    second: Title_Start_3
+  - first:
+      213: 8031714024873590843
+    second: Title_Start_4
+  - first:
+      213: 247394699118213981
+    second: Title_Start_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +61,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TetrisBackground_0
+      name: Title_Start_0
       rect:
         serializedVersion: 2
-        x: 56
-        y: 318
-        width: 32
-        height: 33
+        x: 703
+        y: 760
+        width: 153
+        height: 267
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 220ae7d883de5fd00800000000000000
-      internalID: 1005970918935011362
+      spriteID: 1fdbcd075eb681a50800000000000000
+      internalID: 6492057496039767537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TetrisBackground_1
+      name: Title_Start_1
       rect:
         serializedVersion: 2
-        x: 963
-        y: 33
-        width: 745
-        height: 1374
+        x: 1146
+        y: 1015
+        width: 7
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +152,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fafefb11cea2eebe0800000000000000
-      internalID: -1446171236940910673
+      spriteID: 6f7b6006c3d1bc020800000000000000
+      internalID: 2363014574632253430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_Start_2
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 864
+        width: 172
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53ec4a33037805770800000000000000
+      internalID: 8597520329744895541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_Start_3
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 682
+        width: 756
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff9a1d64e49af78a0800000000000000
+      internalID: -6305134799634716161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_Start_4
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 1003
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b300d1e0a51667f60800000000000000
+      internalID: 8031714024873590843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_Start_5
+      rect:
+        serializedVersion: 2
+        x: 1543
+        y: 682
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5b71480b2cee6300800000000000000
+      internalID: 247394699118213981
       vertices: []
       indices: 
       edges: []
@@ -150,7 +250,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +260,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TetrisBackground_0: 1005970918935011362
-      TetrisBackground_1: -1446171236940910673
+      Title_Start_0: 6492057496039767537
+      Title_Start_1: 2363014574632253430
+      Title_Start_2: 8597520329744895541
+      Title_Start_3: -6305134799634716161
+      Title_Start_4: 8031714024873590843
+      Title_Start_5: 247394699118213981
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
