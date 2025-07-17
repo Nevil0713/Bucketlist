@@ -1262,9 +1262,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueName: Intro
-  nextSceneName: Fishing
+  nextSceneName: Tetris
   dialogueView: {fileID: 2011612940}
   inputHandler: {fileID: 1800458828}
+  startDialogueWhenStart: 1
 --- !u!1 &1811597039
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,10 +3,10 @@
     "dialogues" :
     [
         {
-            "character" : "",
-            "characterSprite" : "",
+            "character" : null,
+            "characterSprite" : null,
             "textbox" : "Narration",
-            "namebox" : "",
+            "namebox" : null,
             "text" : "작년 겨울, 소녀는 시한부 진단을 받았다.",
             "background" : "BlackScreen",
             "choices" : null
@@ -30,19 +30,19 @@
             "choices" : null
         },
         {
-            "character" : "",
-            "characterSprite" : "",
+            "character" : null,
+            "characterSprite" : null,
             "textbox" : "Narration",
-            "namebox" : "",
+            "namebox" : null,
             "text" : "시간은 빠르게 흘러갔고, 8개월이 지나",
             "background" : "BlackScreen",
             "choices" : null
         },
         {
-            "character" : "",
-            "characterSprite" : "",
+            "character" : null,
+            "characterSprite" : null,
             "textbox" : "Narration",
-            "namebox" : "",
+            "namebox" : null,
             "text" : "여름이 찾아왔다.",
             "background" : "BlackScreen",
             "choices" : null
@@ -75,7 +75,7 @@
             "character" : "Soyeong",
             "characterSprite" : "Hospital1",
             "textbox" : "Narration",
-            "namebox" : "",
+            "namebox" : null,
             "text" : "또 하루, 지루한 날이 지나가고 있었고",
             "background" : "Hospital",
             "choices" : null
@@ -105,46 +105,49 @@
             ]
         },
         {
-            "character" : "",
-            "characterSprite" : "",
+            "character" : null,
+            "characterSprite" : null,
             "textbox" : "Narration",
-            "namebox" : "",
+            "namebox" : null,
             "text" : "...소녀는 알지 못했다.",
             "background" : "BlackScreen",
             "choices" : null
         },
         {
-            "character" : "",
-            "characterSprite" : "",
+            "character" : null,
+            "characterSprite" : null,
             "textbox" : "Narration",
-            "namebox" : "",
+            "namebox" : null,
             "text" : "다음날 자신이 세상을 떠난다는 것을.",
             "background" : "BlackScreen",
             "choices" : null
         },
         {
-            "character" : "",
-            "characterSprite" : "",
+            "character" : null,
+            "characterSprite" : null,
             "textbox" : "Narration",
-            "namebox" : "",
+            "namebox" : null,
             "text" : "오늘 밤이 잠에 들 수 있는 마지막 날이라는 것을.",
             "background" : "BlackScreen",
             "choices" : null
         },
+
+
+        
         {
-            "character" : "",
-            "characterSprite" : "",
+            "character" : null,
+            "characterSprite" : null,
             "textbox" : "Narration",
-            "namebox" : "",
+            "namebox" : null,
             "text" : "...",
             "background" : "BlackScreen",
             "choices" : null
         },
         {
-            "character" : "",
-            "characterSprite" : "",
+            "character" : null,
+            "characterSprite" : null,
             "textbox" : "Narration",
-            "namebox" : "",
+            "namebox" : null,
             "text" : "소녀는 잠들었고, 두 요정이 조심스럽게 움직인다.",
             "background" : "BlackScreen",
             "choices" : null
@@ -348,10 +351,313 @@
             "choices" :
             [
                 {
-                    "text" : "소영이의 꿈 속으로 들어간다.",
+                    "text" : "소녀의 꿈 속으로 들어간다.",
                     "nextScene" : null
                 }
             ]
+        },
+
+
+
+        {
+            "character" : null,
+            "characterSprite" : null,
+            "textbox" : "Narration",
+            "namebox" : null,
+            "text" : "요정들은 소녀의 꿈을 바꾸기 시작했다.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : null,
+            "characterSprite" : null,
+            "textbox" : "Narration",
+            "namebox" : null,
+            "text" : "퇴원하면 가고 싶었던 놀이공원",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : null,
+            "characterSprite" : null,
+            "textbox" : "Narration",
+            "namebox" : null,
+            "text" : "낚시해보고 싶었던 여름 바다.",
+            "background" : "Beach",
+            "choices" : null
+        },
+        {
+            "character" : null,
+            "characterSprite" : null,
+            "textbox" : "Narration",
+            "namebox" : null,
+            "text" : "유명한 레스토랑과",
+            "background" : "Restaurant",
+            "choices" : null
+        },
+        {
+            "character" : null,
+            "characterSprite" : null,
+            "textbox" : "Narration",
+            "namebox" : null,
+            "text" : "전망이 아름답다는 큰 타워까지.",
+            "background" : "Tower",
+            "choices" : null
+        },
+        {
+            "character" : null,
+            "characterSprite" : null,
+            "textbox" : "Narration",
+            "namebox" : null,
+            "text" : "요정들의 손짓 한 번으로 꿈속 세계는 소녀의 '꿈'으로 가득 찼다.",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Haru",
+            "characterSprite" : "Stand4",
+            "textbox" : "Haru",
+            "namebox" : "Haru",
+            "text" : "소영이는...",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Milae",
+            "characterSprite" : "Stand5",
+            "textbox" : "Milae",
+            "namebox" : "Milae",
+            "text" : "저기 있다!",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream5",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "...!?",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream6",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "누구..세요?",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Milae",
+            "characterSprite" : "Stand4",
+            "textbox" : "Milae",
+            "namebox" : "Milae",
+            "text" : "많이 놀랐지? 갑자기 주변 풍경이 막 바뀌고.",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Milae",
+            "characterSprite" : "Stand6",
+            "textbox" : "Milae",
+            "namebox" : "Milae",
+            "text" : "나는 미래라고 해.",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Haru",
+            "characterSprite" : "Stand6",
+            "textbox" : "Haru",
+            "namebox" : "Haru",
+            "text" : "안녕, 소영아! 나는 하루야!",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream6",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "미래...? 하루....?",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream5",
+            "textbox" : "Narration",
+            "namebox" : null,
+            "text" : "소녀는 요정들의 정체에 대한 고민에 빠졌으나",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream5",
+            "textbox" : "Narration",
+            "namebox" : null,
+            "text" : "하지만 모든 버킷 리스트를 이루기엔 시간이 부족했고",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream5",
+            "textbox" : "Narration",
+            "namebox" : null,
+            "text" : "분홍색 요정이 소녀의 손을 잡고선 말했다.",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Haru",
+            "characterSprite" : "Stand5",
+            "textbox" : "Haru",
+            "namebox" : "Haru",
+            "text" : "그것보단, 네 꿈을 이루러 가자!",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Milae",
+            "characterSprite" : "Stand4",
+            "textbox" : "Milae",
+            "namebox" : "Milae",
+            "text" : "하고 싶었던 일들.",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Milae",
+            "characterSprite" : "Stand5",
+            "textbox" : "Milae",
+            "namebox" : "Milae",
+            "text" : "버킷 리스트가 아직 많이 남았잖아?",   
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Haru",
+            "characterSprite" : "Stand6",
+            "textbox" : "Haru",
+            "namebox" : "Haru",
+            "text" : "우린 친구니까!",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream5",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "친구...?",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Milae",
+            "characterSprite" : "Stand6",
+            "textbox" : "Milae",
+            "namebox" : "Milae",
+            "text" : "응. 친구.",   
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream5",
+            "textbox" : "Narration",
+            "namebox" : null,
+            "text" : "정말 오랜만에 들어보는 '친구'라는 말",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream2",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "... 응!",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream5",
+            "textbox" : "Narration",
+            "namebox" : null,
+            "text" : "그 한 마디로 소녀의 마음을 움직이기엔 충분했다.",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Haru",
+            "characterSprite" : "Stand2",
+            "textbox" : "Haru",
+            "namebox" : "Haru",
+            "text" : "우선 가까운 놀이공원부터 갈까?",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream2",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "좋아, 가자.",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+
+
+
+        {
+            "character" : null,
+            "characterSprite" : null,
+            "textbox" : "Narration",
+            "namebox" : null,
+            "text" : "소녀는 언젠가 퇴원한다면 어릴때 갔던 놀이공원에 다시 가서 그때 타보지 못한 놀이기구를 타보고 싶었으나",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : null,
+            "characterSprite" : null,
+            "textbox" : "Narration",
+            "namebox" : null,
+            "text" : "병으로 인해 병실에 틀어박힌 소녀는 그 꿈을 이루지 못했다.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : null,
+            "characterSprite" : null,
+            "textbox" : "Narration",
+            "namebox" : null,
+            "text" : "그러나",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream1",
+            "textbox" : "Narration",
+            "namebox" : null,
+            "text" : "꿈 속의 소녀는 달랐다.",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream1",
+            "textbox" : "Narration",
+            "namebox" : null,
+            "text" : "꿈 속의 소녀는 현실의 소녀와 다르게 예쁘고 화려하게 꾸민 모습에 몸도 아프지 않았다.",
+            "background" : "ThemePark",
+            "choices" : null
         }
     ]
 }

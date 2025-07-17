@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 
 
 public class ScreenFader : MonoBehaviour
@@ -19,7 +20,6 @@ public class ScreenFader : MonoBehaviour
         if (m_instance == null)
         {
             m_instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -43,6 +43,8 @@ public class ScreenFader : MonoBehaviour
     {
         if (m_currentRoutine != null)
             StopCoroutine(m_currentRoutine);
+
+        fadeImage = GameObject.Find("FadeImage").GetComponent<Image>();
         m_currentRoutine = StartCoroutine(FadeCoroutine(pFrom, pTo, pOnComplete));
     }
 

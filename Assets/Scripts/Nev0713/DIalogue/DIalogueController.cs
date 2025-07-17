@@ -8,6 +8,7 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private string nextSceneName;
     [SerializeField] private DialogueView dialogueView;
     [SerializeField] private InputHandler inputHandler;
+    [SerializeField] private bool startDialogueWhenStart = false;
 
     private IDialogueLoader m_dialogueLoader = new JsonDialogueLoader();
     private SceneLoader m_sceneLoader = new SceneLoader();
@@ -24,6 +25,9 @@ public class DialogueController : MonoBehaviour
     {
         dialogueView.HideAllUI();
         inputHandler.OnClick += OnScreenClicked;
+
+        if (startDialogueWhenStart)
+            StartFirstDialogue();
     }
 
     public void StartFirstDialogue()
