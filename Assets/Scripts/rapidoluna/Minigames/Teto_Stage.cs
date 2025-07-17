@@ -1,10 +1,7 @@
 using System.Collections;
-using System.Security.Cryptography.X509Certificates;
 using TMPro;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class Teto_Stage : MonoBehaviour
