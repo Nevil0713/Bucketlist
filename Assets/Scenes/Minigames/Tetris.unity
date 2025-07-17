@@ -637,7 +637,7 @@ Transform:
   m_GameObject: {fileID: 381660493}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 2, z: -10}
+  m_LocalPosition: {x: -0.5, y: 1.8, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1264,7 +1264,7 @@ MonoBehaviour:
   Target: {fileID: 1179296037}
   Gauge: {fileID: 1169044650}
   boardWidth: 10
-  boardHeight: 16
+  boardHeight: 15
   fallCycle: 1
   Terto: {fileID: 0}
   Tetime: {fileID: 0}
@@ -1521,8 +1521,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -14, y: -3.5, z: 0}
-  m_LocalScale: {x: 2.7277093, y: 2.7277093, z: 2.7277093}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 666245909}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

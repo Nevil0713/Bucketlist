@@ -1,61 +1,78 @@
-using JetBrains.Annotations;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class SoundManager : MonoBehaviour
 {
+    public enum SoundType
+    {
+        None,
+    }
+
+    public enum BGMType
+    {
+        Test,
+    }
+
     public static SoundManager instance;
 
-    [Header("BGM")]
-    public AudioClip BGMclip;
-    public float BGMVol;
-    public AudioSource BGMsource;
+    [Header("Audio Sources")]
+    public AudioSource bgmSource;
+    public AudioSource sfxSource;
 
-    [Header("SFX")]
-    public AudioClip SFXclip;
-    public float SFXVol;
-    public int channel;
-    public AudioSource[] SFXsource;
-    private int chIndex;
+    [Header("Audio Clips")]
+    [SerializeField] private AudioClip[] sfxList;
+    [SerializeField] private AudioClip[] bgmList;
 
     private void Awake()
     {
-        instance = this;
-        SoundReset();
-    }
-
-    void SoundReset()
-    {
-        //BGM reset
-        GameObject bgmObject = new GameObject("BGMsource");
-        bgmObject.transform.parent = transform;
-        BGMsource = bgmObject.GetComponent<AudioSource>();
-        BGMsource.playOnAwake = false;
-        BGMsource.loop = true;
-        BGMsource.volume = BGMVol;
-        BGMsource.clip = BGMclip;
-
-        //SFX reset
-        GameObject sfxObject = new GameObject("SFXsource");
-        sfxObject.transform.parent = transform;
-        SFXsource = new AudioSource[channel];
-
-        for (int i = 0; i < SFXsource.Length; i++)
+        if (instance == null)
         {
-            SFXsource[i] = sfxObject.AddComponent<AudioSource>();
-            SFXsource[i].playOnAwake = false;
-            SFXsource[i].volume = SFXVol;
-        }
-    }
-
-    public void PlayBGM(bool isPlay)
-    {
-        if (isPlay)
-        {
-            BGMsource.Play();
+            instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            BGMsource.Stop();
+            Destroy(gameObject);
         }
+    }
+
+    public static void PlaySFX(SoundType type, float volume = 1f)
+    {
+        if ((int)type >= instance.sfxList.Length) return;
+
+        AudioClip clip = instance.sfxList[(int)type];
+        if (clip != null)
+        {
+            instance.sfxSource.PlayOneShot(clip, volume);
+        }
+    }
+
+    public static void PlayBGM(BGMType type, float volume = 1f)
+    {
+        if ((int)type >= instance.bgmList.Length) return;
+
+        AudioClip clip = instance.bgmList[(int)type];
+        if (clip != null && instance.bgmSource.clip != clip)
+        {
+            instance.bgmSource.clip = clip;
+            instance.bgmSource.volume = volume;
+            instance.bgmSource.loop = true;
+            instance.bgmSource.Play();
+        }
+    }
+
+    public static void StopBGM()
+    {
+        instance.bgmSource.Stop();
+    }
+
+    public static void SetBGMVolume(float volume)
+    {
+        instance.bgmSource.volume = volume;
+    }
+
+    public static void SetSFXVolume(float volume)
+    {
+        instance.sfxSource.volume = volume;
     }
 }
