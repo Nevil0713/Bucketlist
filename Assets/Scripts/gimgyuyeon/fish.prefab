@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4567587614515085140}
   - component: {fileID: 6697546551195390639}
   - component: {fileID: 5712725913092383952}
+  - component: {fileID: -7537617110462582028}
   m_Layer: 0
   m_Name: fish
   m_TagString: Untagged
@@ -134,3 +135,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 20, y: 10}
   m_EdgeRadius: 0
+--- !u!114 &-7537617110462582028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229156990120621685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 222af41320d04cc41bec3fac0dfd2cd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

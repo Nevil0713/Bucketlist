@@ -499,7 +499,7 @@
             "characterSprite" : "Dream5",
             "textbox" : "Narration",
             "namebox" : null,
-            "text" : "하지만 모든 버킷 리스트를 이루기엔 시간이 부족했고",
+            "text" : "모든 버킷 리스트를 이루기엔 시간이 부족했고",
             "background" : "ThemePark",
             "choices" : null
         },
@@ -586,7 +586,7 @@
         },
         {
             "character" : "Soyeong",
-            "characterSprite" : "Dream5",
+            "characterSprite" : "Dream4",
             "textbox" : "Narration",
             "namebox" : null,
             "text" : "그 한 마디로 소녀의 마음을 움직이기엔 충분했다.",
@@ -615,8 +615,8 @@
 
 
         {
-            "character" : null,
-            "characterSprite" : null,
+            "character" : "Soyeong",
+            "characterSprite" : "Hospital1",
             "textbox" : "Narration",
             "namebox" : null,
             "text" : "소녀는 언젠가 퇴원한다면 어릴때 갔던 놀이공원에 다시 가서 그때 타보지 못한 놀이기구를 타보고 싶었으나",
@@ -624,8 +624,8 @@
             "choices" : null
         },
         {
-            "character" : null,
-            "characterSprite" : null,
+            "character" : "Soyeong",
+            "characterSprite" : "Hospital1",
             "textbox" : "Narration",
             "namebox" : null,
             "text" : "병으로 인해 병실에 틀어박힌 소녀는 그 꿈을 이루지 못했다.",
@@ -633,8 +633,8 @@
             "choices" : null
         },
         {
-            "character" : null,
-            "characterSprite" : null,
+            "character" : "Soyeong",
+            "characterSprite" : "Hospital2",
             "textbox" : "Narration",
             "namebox" : null,
             "text" : "그러나",
@@ -643,7 +643,7 @@
         },
         {
             "character" : "Soyeong",
-            "characterSprite" : "Dream1",
+            "characterSprite" : "Dream4",
             "textbox" : "Narration",
             "namebox" : null,
             "text" : "꿈 속의 소녀는 달랐다.",
@@ -652,10 +652,91 @@
         },
         {
             "character" : "Soyeong",
-            "characterSprite" : "Dream1",
+            "characterSprite" : "Dream4",
             "textbox" : "Narration",
             "namebox" : null,
             "text" : "꿈 속의 소녀는 현실의 소녀와 다르게 예쁘고 화려하게 꾸민 모습에 몸도 아프지 않았다.",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream1",
+            "textbox" : "Narration",
+            "namebox" : null,
+            "text" : "오랜만에 느껴보는 두근거림, 소녀는 가슴이 벅차오르는 것을 느꼈다.",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Haru",
+            "characterSprite" : "Stand3",
+            "textbox" : "Haru",
+            "namebox" : "Haru",
+            "text" : "우와, 바이킹 엄청 높아!",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Haru",
+            "characterSprite" : "Stand1",
+            "textbox" : "Haru",
+            "namebox" : "Haru",
+            "text" : "소영아, 뭐부터 타볼래?",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Haru",
+            "characterSprite" : "Stand2",
+            "textbox" : "Haru",
+            "namebox" : "Haru",
+            "text" : "롤러코스터? 바이킹? 관람차?",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream4",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "나는...",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream3",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "저거, 바이킹 타볼래.",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Haru",
+            "characterSprite" : "Stand3",
+            "textbox" : "Haru",
+            "namebox" : "Haru",
+            "text" : "좋아! 가자!",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Milae",
+            "characterSprite" : "Stand1",
+            "textbox" : "Milae",
+            "namebox" : "Milae",
+            "text" : "둘 다 신나보여서 좋네.",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Milae",
+            "characterSprite" : "Stand3",
+            "textbox" : "Milae",
+            "namebox" : "Milae",
+            "text" : "다행이다.",
             "background" : "ThemePark",
             "choices" : null
         }
