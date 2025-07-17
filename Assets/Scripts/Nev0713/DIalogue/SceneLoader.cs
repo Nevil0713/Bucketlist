@@ -2,7 +2,7 @@ using System;
 using UnityEngine.SceneManagement;
 
 
-public class SceneLoader
+public class TitleButton
 {
     public void LoadScene(string pSceneName, Action pOnComplete)
     {

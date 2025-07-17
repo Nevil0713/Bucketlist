@@ -25,7 +25,7 @@
             "characterSprite" : "Hospital2",
             "textbox" : "Soyeong",
             "namebox" : "Soyeong",
-            "text" : "막상 의사 선생님의 말을 들으니 숨이 턱 막히는 것 같았지.",
+            "text" : "실제로 들어보니 숨이 턱 막히는 것 같네.",
             "background" : "Hospital",
             "choices" : null
         },

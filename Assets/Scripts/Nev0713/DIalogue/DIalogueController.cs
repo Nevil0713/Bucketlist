@@ -11,7 +11,7 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private bool startDialogueWhenStart = false;
 
     private IDialogueLoader m_dialogueLoader = new JsonDialogueLoader();
-    private SceneLoader m_sceneLoader = new SceneLoader();
+    private TitleButton m_sceneLoader = new TitleButton();
 
     private SceneData m_currentScene;
     private int m_dialogueIndex;
