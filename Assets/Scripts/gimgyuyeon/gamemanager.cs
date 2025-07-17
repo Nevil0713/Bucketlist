@@ -51,10 +51,11 @@ public class GameManager : MonoBehaviour
         CancelInvoke(nameof(SpawnMole));
         Debug.Log("게임 종료!");
 
-        if(gameCleared)
-        {
-            gameObject.SetActive(false);
-            dialogueController.StartFirstDialogue();
-        }
+        if (!gameCleared)
+            dialogueController.MinigameFailed();
+        
+        
+        gameObject.SetActive(false);
+        dialogueController.StartFirstDialogue();
     }
 }

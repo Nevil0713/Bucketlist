@@ -1,0 +1,57 @@
+{
+    "sceneName" : "TowerFail",
+    "dialogues" :
+    [
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "버킷리스트의 두 번째 내용을 끝내지 못했다.",
+            "background" : "Tower",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "타워의 가장 높은 곳으로 가는 승강기는 작동을 멈춘 상태였고",
+            "background" : "Tower",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "소녀는 아쉬운 마음을 남긴 채 돌아가야만 했다.",
+            "background" : "Tower",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream1",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "아쉽지만... 어쩔 수 없지.",
+            "background" : "Tower",
+            "choices" : null
+        },
+        {
+            "character" : null,
+            "characterSprite" : null,
+            "textbox" : null,
+            "namebox" : null,
+            "text" : null,
+            "background" : "Tower",
+            "choices" :
+            [
+                {
+                    "text" : "다음 장소로 이동한다.",
+                    "nextScene" : "RestaurantIntro"
+                }
+            ]
+        }
+    ]
+}

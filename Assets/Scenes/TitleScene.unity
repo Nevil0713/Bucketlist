@@ -490,6 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 878eb2b211e557c4a8d452020863a0a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameData: {fileID: 0}
   sceneName: 
 --- !u!1 &593986233
 GameObject:
@@ -637,6 +638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 878eb2b211e557c4a8d452020863a0a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameData: {fileID: 0}
   sceneName: 
 --- !u!1 &735387465
 GameObject:
@@ -1039,6 +1041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 878eb2b211e557c4a8d452020863a0a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameData: {fileID: 0}
   sceneName: 
 --- !u!1 &945297364
 GameObject:
@@ -1355,7 +1358,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1309714499}
         m_TargetAssemblyTypeName: SceneLoadButton, Assembly-CSharp
-        m_MethodName: OnClicked
+        m_MethodName: OnClickedStartNewGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1415,6 +1418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 878eb2b211e557c4a8d452020863a0a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameData: {fileID: 11400000, guid: 78888c75098d47c4989762e5fb88c102, type: 2}
   sceneName: MainScene
 --- !u!1 &1383977197
 GameObject:
@@ -1820,7 +1824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7250881c55c03c044b25272b910bf6cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeImage: {fileID: 0}
+  fadeImage: {fileID: 1885213126}
   fadeDuration: 1
 --- !u!4 &1893469086
 Transform:
@@ -1983,6 +1987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 878eb2b211e557c4a8d452020863a0a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameData: {fileID: 0}
   sceneName: 
 --- !u!1 &2123192934
 GameObject:
@@ -2130,6 +2135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 878eb2b211e557c4a8d452020863a0a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameData: {fileID: 0}
   sceneName: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

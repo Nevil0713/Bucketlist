@@ -14,6 +14,7 @@ public class SequenceMemoryManager : MonoBehaviour
     private int m_currentRound;
     private int m_targetStep;
     private int m_currentStep;
+    private int m_failed;
 
     private void Awake()
     {
@@ -144,6 +145,13 @@ public class SequenceMemoryManager : MonoBehaviour
             m_currentRound = 1;
             m_targetStep = m_currentRound;
             m_currentStep = 0;
+            m_failed++;
+
+            if(m_failed >= 3)
+            {
+                GameOver();
+                yield break;
+            }
 
             for (int i = 0; i < m_buttons.Length; i++)
             {
@@ -180,6 +188,15 @@ public class SequenceMemoryManager : MonoBehaviour
     private void GameClear()
     {
         Debug.Log("Clear");
+        dialogueManager.StartFirstDialogue();
+        roundText.gameObject.SetActive(false);
+        gameObject.SetActive(false);
+    }
+    
+    private void GameOver()
+    {
+        Debug.Log("Fail");
+        dialogueManager.MinigameFailed();
         dialogueManager.StartFirstDialogue();
         roundText.gameObject.SetActive(false);
         gameObject.SetActive(false);

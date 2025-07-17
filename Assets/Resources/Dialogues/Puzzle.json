@@ -7,16 +7,25 @@
             "characterSprite" : "",
             "textbox" : "Narration",
             "namebox" : "",
-            "text" : "마지막 퍼즐을 완성했다.",
+            "text" : "퍼즐을 완성했다.",
             "background" : "Beach",
             "choices" : null
         },
         {
             "character" : "Soyeong",
-            "characterSprite" : "Dream1",
+            "characterSprite" : "Dream6",
             "textbox" : "Soyeong",
             "namebox" : "Soyeong",
-            "text" : " ",
+            "text" : "...",
+            "background" : "Beach",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream5",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "소녀는 무언가 말하려 했으나, 이내 그만두었다.",
             "background" : "Beach",
             "choices" : null
         },
@@ -30,7 +39,7 @@
             "choices" :
             [
                 {
-                    "text" : "다음 장소로 이동한다.",
+                    "text" : "천천히 눈을 감는다.",
                     "nextScene" : null
                 }
             ]

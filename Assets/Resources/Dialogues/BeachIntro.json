@@ -1,0 +1,87 @@
+{
+    "sceneName" : "BeachIntro",
+    "dialogues" :
+    [
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "어릴 적의 소녀는 바다에 가본 적이 있었다.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "추운 겨울, 차가운 바닷물에 들어가 놀 수 없었던 소녀는 낚시하는 사람들을 구경했다.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "그렇게 소녀는 낚시를 해보고 싶다는 마음을 키워갔다.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream1",
+            "textbox" : "Narration",
+            "namebox" : "Soyeong",
+            "text" : "...",
+            "background" : "Beach",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream1",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "소녀가 조심스레 바닷물에 발을 담군다.",
+            "background" : "Beach",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream1",
+            "textbox" : "Narration",
+            "namebox" : "Soyeong",
+            "text" : "시원하다.",
+            "background" : "Beach",
+            "choices" : null
+        },
+        {
+            "character" : "Haru",
+            "characterSprite" : "Stand5",
+            "textbox" : "Haru",
+            "namebox" : "Haru",
+            "text" : "우리 다같이 여기서 수영하자! 낚시도!",
+            "background" : "Beach",
+            "choices" : null
+        },
+        {
+            "character" : "Milae",
+            "characterSprite" : "Stand5",
+            "textbox" : "Milae",
+            "namebox" : "Milae",
+            "text" : "튜브 가져왔어. 소영이는 어때?",
+            "background" : "Beach",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream2",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "좋아!",
+            "background" : "Beach",
+            "choices" : null
+        }
+    ]
+}

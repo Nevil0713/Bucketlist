@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DialogueController : MonoBehaviour
 {
+    [SerializeField] private GameData gameData;
     [SerializeField] private string dialogueName;
     [SerializeField] private string nextSceneName;
     [SerializeField] private DialogueView dialogueView;
@@ -28,6 +29,22 @@ public class DialogueController : MonoBehaviour
 
         if (startDialogueWhenStart)
             StartFirstDialogue();
+    }
+
+    public GameData GetData()
+    {
+        return gameData;
+    }
+
+    public void MinigameFailed()
+    {
+        gameData.MinigameFails++;
+        dialogueName += "Fail";
+    }
+
+    public void SetDialogueName(string pDialogueName)
+    {
+        dialogueName = pDialogueName;
     }
 
     public void StartFirstDialogue()

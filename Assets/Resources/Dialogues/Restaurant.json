@@ -12,11 +12,38 @@
             "choices" : null
         },
         {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "소녀는 맛있는 음식을 배부르게 먹었고",
+            "background" : "Restaurant",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "두 요정 또한 만족한 듯 보였다.",
+            "background" : "Restaurant",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream3",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "이렇게 맛있는 음식은 처음이야.",
+            "background" : "Restaurant",
+            "choices" : null
+        },
+        {
             "character" : "Soyeong",
             "characterSprite" : "Dream1",
             "textbox" : "Soyeong",
             "namebox" : "Soyeong",
-            "text" : " ",
+            "text" : "정말 [죽기 전에 한 번은 먹어봐야 하는 맛]이었어!",
             "background" : "Restaurant",
             "choices" : null
         },
@@ -31,7 +58,7 @@
             [
                 {
                     "text" : "다음 장소로 이동한다.",
-                    "nextScene" : null
+                    "nextScene" : "BeachIntro"
                 }
             ]
         }

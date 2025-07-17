@@ -12,11 +12,29 @@
             "choices" : null
         },
         {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "소녀는 다른 놀이기구도 타보고 싶다며 말했고",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "두 요정은 밝게 웃으며 소녀와 함께 놀이기구를 즐겼다.",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
             "character" : "Soyeong",
             "characterSprite" : "Dream1",
             "textbox" : "Soyeong",
             "namebox" : "Soyeong",
-            "text" : " ",
+            "text" : "재미있었어!",
             "background" : "ThemePark",
             "choices" : null
         },
@@ -31,7 +49,7 @@
             [
                 {
                     "text" : "다음 장소로 이동한다.",
-                    "nextScene" : null
+                    "nextScene" : "TowerIntro"
                 }
             ]
         }

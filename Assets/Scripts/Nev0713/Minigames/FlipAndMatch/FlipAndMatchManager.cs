@@ -138,11 +138,15 @@ public class FlipAndMatchManager : MonoBehaviour
 
     private void GameOver()
     {
+        Debug.Log("Fail");
+        dialogueManager.MinigameFailed();
+        dialogueManager.StartFirstDialogue();
         for (int i = 0; i < cards.Length; i++)
         {
             cards[i].gameObject.SetActive(false);
         }
         tryCountImage.gameObject.SetActive(false);
         tryCountText.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 }

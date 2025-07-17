@@ -1,0 +1,57 @@
+{
+    "sceneName" : "RestaurantFail",
+    "dialogues" :
+    [
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "버킷리스트의 세 번째 내용을 끝내지 못했다.",
+            "background" : "Restaurant",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "레스토랑은 아무도 없어 을씨년스러운 분위기를 풍겼고",
+            "background" : "Restaurant",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "소녀는 그 불안한 기운에 다른 곳으로 가자며 발걸음을 돌렸다.",
+            "background" : "Restaurant",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream6",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "아무도 없는데 음식 냄새만 흘러나오고 있어...?",
+            "background" : "Restaurant",
+            "choices" : null
+        },
+        {
+            "character" : null,
+            "characterSprite" : null,
+            "textbox" : null,
+            "namebox" : null,
+            "text" : null,
+            "background" : "Restaurant",
+            "choices" :
+            [
+                {
+                    "text" : "다음 장소로 이동한다.",
+                    "nextScene" : "BeachIntro"
+                }
+            ]
+        }
+    ]
+}

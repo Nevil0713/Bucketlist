@@ -12,6 +12,24 @@
             "choices" : null
         },
         {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "소녀는 작은 물고기 하나를 낚았고",
+            "background" : "Beach",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "두 요정은 신난 소녀를 뿌듯해하며 바라보았다.",
+            "background" : "Beach",
+            "choices" : null
+        },
+        {
             "character" : "Soyeong",
             "characterSprite" : "Dream1",
             "textbox" : "Soyeong",
@@ -30,8 +48,8 @@
             "choices" :
             [
                 {
-                    "text" : "다음 장소로 이동한다.",
-                    "nextScene" : null
+                    "text" : "...",
+                    "nextScene" : "PuzzleIntro"
                 }
             ]
         }

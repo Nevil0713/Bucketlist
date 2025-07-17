@@ -1249,7 +1249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1986e015767d7db4ca191171bdb52879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogManager: {fileID: 1305286469}
+  dialogueManager: {fileID: 1305286469}
   dialogCanvas: {fileID: 601754328}
   tilePrefab: {fileID: 2712014139567013138, guid: 1413075276fc9464995a1bd44028f914, type: 3}
   backgroundNode: {fileID: 2063051918}
@@ -2757,6 +2757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8430f0cff42d6a8459c84c348d1874c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameData: {fileID: 11400000, guid: 78888c75098d47c4989762e5fb88c102, type: 2}
   dialogueName: ThemePark
   nextSceneName: SequenceMemory
   dialogueView: {fileID: 601754329}

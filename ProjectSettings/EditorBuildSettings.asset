@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigames/Tetris.unity
     guid: b31f8f7dc957ced448a23cad652b9ba1
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: 547297179fdf81044b2210f393a8e6ad
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

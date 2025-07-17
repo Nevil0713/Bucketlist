@@ -1,0 +1,96 @@
+{
+    "sceneName" : "HappyEnd",
+    "dialogues" :
+    [
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "소녀는 천천히 눈을 떴다.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "",
+            "namebox" : "",
+            "text" : "",
+            "background" : "HappyEnd",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "... 하하.",
+            "background" : "HappyEnd",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "비록 꿈 속일지라도, '꿈'을 이뤘네.",
+            "background" : "HappyEnd",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "미래... 하루... 고마워.",
+            "background" : "HappyEnd",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "모두 너희 덕분이야...",
+            "background" : "HappyEnd",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "소녀는 곧 정신을 잃었어.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "하지만 괜찮아.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "그녀의 꿈은 이루어졌으니까.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "[ Happy End - 이루어진 꿈 ]",
+            "background" : "BlackScreen",
+            "choices" : null
+        }
+    ]
+}

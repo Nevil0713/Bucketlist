@@ -5,10 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoadButton : MonoBehaviour
 {
+    [SerializeField] GameData gameData;
     [SerializeField] string sceneName;
 
     public void OnClicked()
     {
+        StartCoroutine(LoadScene());
+    }
+
+    public void OnClickedStartNewGame()
+    {
+        gameData.Init();
         StartCoroutine(LoadScene());
     }
 

@@ -1,0 +1,69 @@
+{
+    "sceneName" : "BadEnd",
+    "dialogues" :
+    [
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "...",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "",
+            "namebox" : "",
+            "text" : "",
+            "background" : "BadEnd",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "소녀는 생각했다.",
+            "background" : "BadEnd",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "꿈을... 꾼 것 같은데...",
+            "background" : "BadEnd",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "소녀는 결국 꿈을 기억하지 못했어.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "떠올려내기 전에 수명이 다했으니까.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "[ Bad End - 기억하지 못하는 꿈 ]",
+            "background" : "BlackScreen",
+            "choices" : null
+        }
+    ]
+}

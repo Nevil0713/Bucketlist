@@ -1,0 +1,69 @@
+{
+    "sceneName" : "TowerIntro",
+    "dialogues" :
+    [
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "어릴 적, 소녀는 키가 매우 작았다.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "그래서일까? 어릴 적의 소녀는 큰 키, 큰 건물을 좋아하고 신기해했다.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Hospital1",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "병원 창문 너머로 항상 보였던 타워.",
+            "background" : "Hospital",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Hospital1",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "소녀는 '언젠가' 꼭 가보겠다고 생각하고 있었다.",
+            "background" : "Hospital",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream4",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "...",
+            "background" : "Tower",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream1",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "이 타워는 생각보다 훨씬 크구나.",
+            "background" : "Tower",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream1",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "소녀는 설레는 마음으로 타워 꼭대기로 가는 승강기로 향한다.",
+            "background" : "Tower",
+            "choices" : null
+        }
+    ]
+}

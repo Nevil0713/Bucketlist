@@ -1,0 +1,57 @@
+{
+    "sceneName" : "ThemeParkFail",
+    "dialogues" :
+    [
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "버킷리스트의 첫 번째 내용을 끝내지 못했다.",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "소녀는 생각보다 더 거대했던 바이킹에 겁먹었던 걸까?",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "두 요정은 '괜찮다'며 다른 것들을 해보자 말했다.",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream5",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "미안, 내가 타고싶다고 해서 온건데...",
+            "background" : "ThemePark",
+            "choices" : null
+        },
+        {
+            "character" : null,
+            "characterSprite" : null,
+            "textbox" : null,
+            "namebox" : null,
+            "text" : null,
+            "background" : "ThemePark",
+            "choices" :
+            [
+                {
+                    "text" : "다음 장소로 이동한다.",
+                    "nextScene" : "TowerIntro"
+                }
+            ]
+        }
+    ]
+}

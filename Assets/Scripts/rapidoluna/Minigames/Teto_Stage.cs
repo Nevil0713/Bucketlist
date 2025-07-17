@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Security.Cryptography.X509Certificates;
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
@@ -10,7 +11,7 @@ public class Teto_Stage : MonoBehaviour
 {
     //Object linked with U6 Editor
     [Header("Editor Objects")]
-    public GameObject dialogManager;
+    public GameObject dialogueManager;
     public GameObject dialogCanvas;
     public GameObject tilePrefab;
     public Transform backgroundNode;
@@ -186,14 +187,21 @@ public class Teto_Stage : MonoBehaviour
             gamedonePanel.SetActive(false);
         }
 
-        StartCoroutine(TurnDialogueOn());
+        StartCoroutine(TurnDialogueOn(isWin));
     }
-    IEnumerator TurnDialogueOn()
+    IEnumerator TurnDialogueOn(bool isWin)
     {
         yield return new WaitForSeconds(1);
         UI_score.SetActive(false);
         yield return new WaitForSeconds(1);
-        dialogManager.GetComponent<DialogueController>().StartFirstDialogue();
+
+        if(!isWin)
+        {
+            Debug.Log("Fail!");
+            dialogueManager.GetComponent<DialogueController>().MinigameFailed();
+        }
+
+        dialogueManager.GetComponent<DialogueController>().StartFirstDialogue();
         gameObject.SetActive(false);
     }
 

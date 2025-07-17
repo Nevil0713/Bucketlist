@@ -1,0 +1,60 @@
+{
+    "sceneName" : "DeadEnd",
+    "dialogues" :
+    [
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "소녀는 천천히 눈을 떴다.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "",
+            "namebox" : "",
+            "text" : "",
+            "background" : "DeadEnd",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "으... 으윽... 머리가...",
+            "background" : "DeadEnd",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "소녀는 곧 정신을 잃었어.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "악몽에 잡아먹힌거지.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "[ Dead End - 악몽에 잡아먹히다 ]",
+            "background" : "BlackScreen",
+            "choices" : null
+        }
+    ]
+}

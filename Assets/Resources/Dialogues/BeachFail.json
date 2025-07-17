@@ -1,0 +1,57 @@
+{
+    "sceneName" : "BeachFail",
+    "dialogues" :
+    [
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "버킷리스트의 네 번째 내용을 끝내지 못했다.",
+            "background" : "Beach",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "소녀는 작은 물고기조차 한 마리도 잡지 못했고",
+            "background" : "Beach",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "두 요정은 그런 소녀를 위로해주었다.",
+            "background" : "Beach",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream6",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "아쉽다... 한 마리 정돈 잡고 싶었는데.",
+            "background" : "Beach",
+            "choices" : null
+        },
+        {
+            "character" : null,
+            "characterSprite" : null,
+            "textbox" : null,
+            "namebox" : null,
+            "text" : null,
+            "background" : "Beach",
+            "choices" :
+            [
+                {
+                    "text" : "...",
+                    "nextScene" : "PuzzleIntro"
+                }
+            ]
+        }
+    ]
+}

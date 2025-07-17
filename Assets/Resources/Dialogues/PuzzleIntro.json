@@ -1,0 +1,48 @@
+{
+    "sceneName" : "PuzzleIntro",
+    "dialogues" :
+    [
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "소녀는 직감적으로 알 수 있었다.",
+            "background" : "Beach",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "꿈이 끝나가고 있음을.",
+            "background" : "Beach",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream5",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "...",
+            "background" : "Beach",
+            "choices" : null
+        },
+        {
+            "character" : null,
+            "characterSprite" : null,
+            "textbox" : null,
+            "namebox" : null,
+            "text" : null,
+            "background" : "Beach",
+            "choices" :
+            [
+                {
+                    "text" : "퍼즐을 맞춘다.",
+                    "nextScene" : null
+                }
+            ]
+        }
+    ]
+}

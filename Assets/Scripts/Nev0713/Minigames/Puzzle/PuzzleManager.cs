@@ -4,55 +4,41 @@ using UnityEngine;
 public class PuzzleManager : MonoBehaviour
 {
     [SerializeField] private DialogueController dialogueManager;
-    [SerializeField] private GameObject[] puzzles;
-    private Puzzle m_puzzle;
-    private int m_puzzleNumber = 0;
+    [SerializeField] private GameObject puzzle;
+
+    bool isCleared = false;
 
     private void Awake()
     {
+        puzzle.SetActive(false);
+        isCleared = false;
         ScreenFader.FadeOut();
         Invoke("Init", 1);
     }
 
     private void Update()
     {
-        if (m_puzzle.IsCleared() && m_puzzleNumber < puzzles.Length)
+        if (puzzle.GetComponent<Puzzle>().IsCleared() && !isCleared)
         {
-            m_puzzle.gameObject.SetActive(false);
-            PuzzleClear();
+            GameClear();
         }
     }
 
     public void Init()
     {
-        for (int i = 0; i < puzzles.Length; i++)
-        {
-            puzzles[i].SetActive(false);
-        }
         PuzzleStart();
     }
 
     private void PuzzleStart()
     {
-        puzzles[m_puzzleNumber].SetActive(true);
-        m_puzzle = puzzles[m_puzzleNumber].GetComponent<Puzzle>();
-    }
-
-    private void PuzzleClear()
-    {
-        m_puzzleNumber++;
-        if(m_puzzleNumber == puzzles.Length)
-        {
-            GameClear();
-            return;
-        }
-        PuzzleStart();
-        
+        puzzle.SetActive(true);
     }
 
     private void GameClear()
     {
         Debug.Log("Clear");
+        isCleared = true;
+        puzzle.SetActive(false);
         dialogueManager.StartFirstDialogue();
     }
 }

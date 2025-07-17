@@ -1,0 +1,42 @@
+{
+    "sceneName" : "RestaurantIntro",
+    "dialogues" :
+    [
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "어릴 적 우연한 계기로 접하게 된 잡지에서 본 레스토랑.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "그 잡지엔 [죽기 전 한번은 꼭 먹어봐야 하는 맛]이라고 쓰여있었고",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "그것은 매일 맛없는 병원밥만 먹던 소녀의 마음을 매료시키기에 충분했다.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : "Soyeong",
+            "characterSprite" : "Dream2",
+            "textbox" : "Soyeong",
+            "namebox" : "Soyeong",
+            "text" : "에헤헤... 반드시 한 번은 와보고 싶었단 말이지.",
+            "background" : "Restaurant",
+            "choices" : null
+        }
+    ]
+}

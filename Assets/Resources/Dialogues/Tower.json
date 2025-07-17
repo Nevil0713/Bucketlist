@@ -12,11 +12,29 @@
             "choices" : null
         },
         {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "소녀는 타워의 가장 높은 곳에서 아름다운 경치를 구경했고",
+            "background" : "Tower",
+            "choices" : null
+        },
+        {
+            "character" : "",
+            "characterSprite" : "",
+            "textbox" : "Narration",
+            "namebox" : "",
+            "text" : "두 요정은 한 걸음 뒤에서 그런 소녀를 지켜보았다.",
+            "background" : "Tower",
+            "choices" : null
+        },
+        {
             "character" : "Soyeong",
             "characterSprite" : "Dream1",
             "textbox" : "Soyeong",
             "namebox" : "Soyeong",
-            "text" : " ",
+            "text" : "여기 풍경 엄청 예쁘다!",
             "background" : "Tower",
             "choices" : null
         },
@@ -31,7 +49,7 @@
             [
                 {
                     "text" : "다음 장소로 이동한다.",
-                    "nextScene" : null
+                    "nextScene" : "RestaurantIntro"
                 }
             ]
         }

@@ -7,7 +7,16 @@
             "characterSprite" : null,
             "textbox" : "Narration",
             "namebox" : null,
-            "text" : "작년 겨울, 소녀는 시한부 진단을 받았다.",
+            "text" : "1년 전 겨울.",
+            "background" : "BlackScreen",
+            "choices" : null
+        },
+        {
+            "character" : null,
+            "characterSprite" : null,
+            "textbox" : "Narration",
+            "namebox" : null,
+            "text" : "소녀는 시한부 진단을 받았다.",
             "background" : "BlackScreen",
             "choices" : null
         },
@@ -34,7 +43,7 @@
             "characterSprite" : null,
             "textbox" : "Narration",
             "namebox" : null,
-            "text" : "시간은 빠르게 흘러갔고, 8개월이 지나",
+            "text" : "그리고 8개월 뒤, 현재.",
             "background" : "BlackScreen",
             "choices" : null
         },
@@ -76,7 +85,7 @@
             "characterSprite" : "Hospital1",
             "textbox" : "Narration",
             "namebox" : null,
-            "text" : "또 하루, 지루한 날이 지나가고 있었고",
+            "text" : "또 하루, 소녀는 지루한 날을 보내고 있었고",
             "background" : "Hospital",
             "choices" : null
         },
@@ -85,7 +94,7 @@
             "characterSprite" : "Hospital2",
             "textbox" : "Soyeong",
             "namebox" : "Soyeong",
-            "text" : "나는 오늘도 핸드폰이나 만지작거리다 잠들겠지.",
+            "text" : "오늘도 핸드폰이나 만지작거리다 잠들겠지.",
             "background" : "Hospital",
             "choices" : null
         },
@@ -109,7 +118,7 @@
             "characterSprite" : null,
             "textbox" : "Narration",
             "namebox" : null,
-            "text" : "...소녀는 알지 못했다.",
+            "text" : "... 소녀는 알지 못했다.",
             "background" : "BlackScreen",
             "choices" : null
         },
@@ -127,7 +136,7 @@
             "characterSprite" : null,
             "textbox" : "Narration",
             "namebox" : null,
-            "text" : "오늘 밤이 잠에 들 수 있는 마지막 날이라는 것을.",
+            "text" : "오늘 밤이, 잠에 들 수 있는 마지막 날이라는 것을.",
             "background" : "BlackScreen",
             "choices" : null
         },
@@ -148,7 +157,7 @@
             "characterSprite" : null,
             "textbox" : "Narration",
             "namebox" : null,
-            "text" : "소녀는 잠들었고, 두 요정이 조심스럽게 움직인다.",
+            "text" : "소녀가 잠들자 두 요정이 조심스럽게 움직인다.",
             "background" : "BlackScreen",
             "choices" : null
         },
@@ -157,7 +166,7 @@
             "characterSprite" : "Stand2",
             "textbox" : "Haru",
             "namebox" : "Haru",
-            "text" : "오늘이야.",
+            "text" : "미래야, 오늘이야.",
             "background" : "BlackScreen",
             "choices" : null
         },
