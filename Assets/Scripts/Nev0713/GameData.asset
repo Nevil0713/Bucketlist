@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7950284bf9ad6724996039fcbbd1c8cc, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  MinigameFails: 2
+  LastSceneName: MainScene
+  MinigameFails: 0

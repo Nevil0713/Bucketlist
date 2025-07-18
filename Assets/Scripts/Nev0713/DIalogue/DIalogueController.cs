@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class DialogueController : MonoBehaviour
@@ -24,6 +25,7 @@ public class DialogueController : MonoBehaviour
 
     private void Start()
     {
+        gameData.LastSceneName = SceneManager.GetActiveScene().name;
         dialogueView.HideAllUI();
         inputHandler.OnClick += OnScreenClicked;
 

@@ -429,8 +429,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 190591593}
-        m_TargetAssemblyTypeName: SceneLoadButton, Assembly-CSharp
-        m_MethodName: OnClicked
+        m_TargetAssemblyTypeName: TitleScene, Assembly-CSharp
+        m_MethodName: OnClickedContinue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -490,7 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 878eb2b211e557c4a8d452020863a0a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameData: {fileID: 0}
+  gameData: {fileID: 11400000, guid: 78888c75098d47c4989762e5fb88c102, type: 2}
   sceneName: 
 --- !u!1 &593986233
 GameObject:
@@ -557,7 +557,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -571,7 +571,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 593986236}
   m_OnClick:
     m_PersistentCalls:
@@ -638,7 +638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 878eb2b211e557c4a8d452020863a0a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameData: {fileID: 0}
+  gameData: {fileID: 11400000, guid: 78888c75098d47c4989762e5fb88c102, type: 2}
   sceneName: 
 --- !u!1 &735387465
 GameObject:
@@ -1041,7 +1041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 878eb2b211e557c4a8d452020863a0a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameData: {fileID: 0}
+  gameData: {fileID: 11400000, guid: 78888c75098d47c4989762e5fb88c102, type: 2}
   sceneName: 
 --- !u!1 &945297364
 GameObject:
@@ -1906,7 +1906,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1920,7 +1920,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2005757427}
   m_OnClick:
     m_PersistentCalls:
@@ -1987,7 +1987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 878eb2b211e557c4a8d452020863a0a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameData: {fileID: 0}
+  gameData: {fileID: 11400000, guid: 78888c75098d47c4989762e5fb88c102, type: 2}
   sceneName: 
 --- !u!1 &2123192934
 GameObject:
@@ -2054,7 +2054,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2068,7 +2068,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2123192937}
   m_OnClick:
     m_PersistentCalls:
@@ -2135,7 +2135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 878eb2b211e557c4a8d452020863a0a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameData: {fileID: 0}
+  gameData: {fileID: 11400000, guid: 78888c75098d47c4989762e5fb88c102, type: 2}
   sceneName: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

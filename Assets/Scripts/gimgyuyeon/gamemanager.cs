@@ -5,7 +5,7 @@ using System.Collections;
 public class GameManager : MonoBehaviour
 {
     public DialogueController dialogueController;
-    public GameObject molePrefab;
+    public GameObject fish;
     public Transform[] spawnPoints;
     public float spawnInterval = 1.5f;
     public float moleStayTime = 1f;
@@ -22,19 +22,23 @@ public class GameManager : MonoBehaviour
         remainingTime = gameDuration;
 
         // 두더지 생성 반복
-        InvokeRepeating(nameof(SpawnMole), 1f, spawnInterval);
+        StartCoroutine(SpawnFish());
 
         // 타이머 시작
         StartCoroutine(GameTimer());
     }
 
-    void SpawnMole()
+    IEnumerator SpawnFish()
     {
-        int index = Random.Range(0, spawnPoints.Length);
-        Transform spawnPoint = spawnPoints[index];
-
-        GameObject mole = Instantiate(molePrefab, spawnPoint.position, Quaternion.identity);
-        Destroy(mole, moleStayTime);
+        while (true)
+        {
+            int index = Random.Range(0, spawnPoints.Length);
+            Transform spawnPoint = spawnPoints[index];
+            fish.transform.position = spawnPoint.position;
+            fish.SetActive(true);
+            yield return new WaitForSeconds(2);
+            fish.SetActive(false);
+        }
     }
 
     IEnumerator GameTimer()
@@ -48,13 +52,13 @@ public class GameManager : MonoBehaviour
 
         // 타이머 종료
         timerText.text = "Time: 0";
-        CancelInvoke(nameof(SpawnMole));
+        CancelInvoke(nameof(SpawnFish));
         Debug.Log("게임 종료!");
 
         if (!gameCleared)
             dialogueController.MinigameFailed();
-        
-        
+
+
         gameObject.SetActive(false);
         dialogueController.StartFirstDialogue();
     }
